@@ -2,7 +2,7 @@
 
 Chaque parcours décrit : **acteur(s)**, **déclencheur**, **pré-conditions**, **étapes** (avec l'écran concerné, voir fichier 07), **alternatives et erreurs**, **résultat**, **modules** (voir fichier 05) et **critères d'acceptation** (format *Étant donné / Quand / Alors*). Les rapports et faits suivent les cycles de vie du fichier 03.
 
-Index : P-01 découverte · P-02 déposer un rapport · P-03 rédiger avec gabarit · P-04 signalement court · P-05 confirmer les faits · P-06 répondre à une précision · P-07 suivre mes rapports · P-08 responsable d'application · P-09 responsable de projet · P-10 exprimer une demande · P-11 qualifier les demandes · P-12 prioriser et arbitrer · P-13 roadmap · P-14 dette · P-15 ressources · P-16 budget · P-17 contrats · P-18 sécurité et risques · P-19 conformité · P-20 comité et décision · P-21 produire rapport/présentation · P-22 assistant · P-23 vue stratégique · P-24 audit et contrôle · P-25 qualité des données · P-26 administration · P-27 mobilité, départ, retrait.
+Index : P-01 découverte · P-02 déposer un rapport · P-03 rédiger avec gabarit · P-04 signalement court · P-05 confirmer les faits · P-06 répondre à une précision · P-07 suivre mes rapports · P-08 responsable d'application · P-09 responsable de projet · P-10 exprimer une demande · P-11 qualifier les demandes · P-12 prioriser et arbitrer · P-13 roadmap · P-14 dette · P-15 ressources · P-16 budget · P-17 contrats · P-18 sécurité et risques · P-19 contraintes et échéances · P-20 comité et décision · P-21 produire rapport/présentation · P-22 assistant · P-23 vue stratégique · P-24 traçabilité et justification · P-25 qualité des données · P-26 administration · P-27 mobilité, départ, retrait.
 
 ---
 
@@ -14,7 +14,7 @@ Index : P-01 découverte · P-02 déposer un rapport · P-03 rédiger avec gabar
 - **Étapes**
   1. *E-01 Accueil de bienvenue* : en 3 écrans courts, Odin explique (a) à quoi sert le dépôt de rapports, (b) ce que l'IA fait et ne fait pas, (c) **ce qu'Odin ne fait pas : il n'évalue pas les personnes**.
   2. L'utilisateur confirme son **équipe** (suggérée depuis l'organisation) et ses **applications / projets** de référence (suggestions, facultatif).
-  3. Odin présente les **règles de confidentialité** (niveaux N1 à N4) et l'avertissement sur les contenus classifiés de défense (à ne pas déposer).
+  3. Odin présente les **règles de confidentialité** (niveaux de classification définis par l'organisme) et ce qu'Odin fait ou non des contenus.
   4. Odin propose deux actions : *Déposer mon premier rapport* ou *Explorer*.
 - **Alternatives** : l'utilisateur passe l'introduction (accessible ensuite dans l'aide) ; équipe inconnue → rattachement provisoire à son service.
 - **Résultat** : profil de contribution initialisé ; consentement d'information tracé.
@@ -154,7 +154,7 @@ Index : P-01 découverte · P-02 déposer un rapport · P-03 rédiger avec gabar
 - **Déclencheur** : besoin nouveau ou évolution d'un service rendu.
 - **Étapes**
   1. *E-11 Nouvelle demande* : énoncé du besoin en langage libre, **service rendu concerné**, urgence ressentie, échéance contrainte (texte, calendrier), valeur attendue (qualitative, usagers concernés).
-  2. L'IA propose : demandes **similaires ou existantes** (éviter les doublons), initiatives en cours qui y répondent, applications déjà disponibles qui couvrent le besoin (réutilisation, briques mutualisées de l'État).
+  2. L'IA propose : demandes **similaires ou existantes** (éviter les doublons), initiatives en cours qui y répondent, applications déjà disponibles qui couvrent le besoin (réutilisation, solutions mutualisées ou réutilisables connues de l'organisme).
   3. Envoi ; accusé avec numéro et circuit prévu.
   4. Suivi dans « Mes demandes » (statut, décisions, motifs).
 - **Alternatives** : demande déjà couverte → redirection ; demande incomplète → précision demandée.
@@ -168,7 +168,7 @@ Index : P-01 découverte · P-02 déposer un rapport · P-03 rédiger avec gabar
 - **Déclencheur** : file de demandes ; revue périodique.
 - **Étapes**
   1. *E-12 File de qualification* : demandes triées (urgence, échéances contraintes), avec regroupements suggérés (doublons, thèmes).
-  2. Pour chaque demande : compléter (valeur, effort estimé, services rendus, dépendances, **obligation réglementaire liée**, risque couvert), demander avis (architecture, sécurité, finances).
+  2. Pour chaque demande : compléter (valeur, effort estimé, services rendus, dépendances, **contrainte externe liée**, risque couvert), demander avis (architecture, sécurité, finances).
   3. Décision de qualification : **instruire**, **fusionner**, **différer** (avec motif), **refuser** (avec motif), **orienter** vers un dispositif existant.
   4. Les demandes instruites deviennent des **candidats** au portefeuille.
 - **Alternatives** : demande sensible → circuit restreint ; échéance légale → marquage « non arbitrable » (RG-13).
@@ -182,10 +182,10 @@ Index : P-01 découverte · P-02 déposer un rapport · P-03 rédiger avec gabar
 - **Déclencheur** : cycle budgétaire ; comité d'investissement ; événement.
 - **Étapes**
   1. *E-13 Portefeuille* : vue d'ensemble des initiatives (en cours, candidates) avec valeur, coût, ETP, risque couvert, dette traitée, dépendances, échéances contraintes.
-  2. Paramétrer la **grille de critères** (valeur de service public, risque couvert, obligation, dette traitée, coût, effort, urgence, souveraineté…) avec **pondérations** ; scores calculés **et explicables**.
-  3. Poser des **contraintes** : budget (par programme/titre), capacité en ETP par profil, plafond d'emplois, échéances non arbitrables.
+  2. Paramétrer la **grille de critères** (valeur de service, risque couvert, contrainte externe, dette traitée, coût, effort, urgence, souveraineté…) avec **pondérations** ; scores calculés **et explicables**.
+  3. Poser des **contraintes** : budget (nomenclature de l'organisme), capacité en ETP par profil, plafond d'effectifs éventuel, échéances non arbitrables.
   4. *E-14 Scénarios* : créer des scénarios (« avec/sans projet X », « budget −10 % », « 3 ETP de moins sur le profil Y ») ; Odin calcule **ce qui tient, ce qui est dépassé, ce qui est retardé**, et le **coût du report**.
-  5. Comparer les scénarios côte à côte ; Odin met en évidence les **conséquences non évidentes** (dépendances, dette qui s'aggrave, échéance réglementaire manquée, profil en tension).
+  5. Comparer les scénarios côte à côte ; Odin met en évidence les **conséquences non évidentes** (dépendances, dette qui s'aggrave, échéance externe manquée, profil en tension).
   6. Constituer la **proposition d'arbitrage** → note de décision (P-20).
 - **Alternatives** : données insuffisantes → liste des faits manquants avec responsable ; échéance non arbitrable en conflit avec la capacité → alerte rouge.
 - **Résultat** : arbitrage préparé, traçable, avec hypothèses explicites.
@@ -199,7 +199,7 @@ Index : P-01 découverte · P-02 déposer un rapport · P-03 rédiger avec gabar
 - **Acteur** : R12 (principal), R06, R04, R13.
 - **Déclencheur** : cycle annuel ; décision d'arbitrage ; changement majeur.
 - **Étapes**
-  1. *E-15 Roadmap* : vue par **horizons** (maintenant, prochainement, plus tard) et par **thèmes/objectifs** ; options : par service rendu, par application, par équipe, par obligation réglementaire.
+  1. *E-15 Roadmap* : vue par **horizons** (maintenant, prochainement, plus tard) et par **thèmes/objectifs** ; options : par service rendu, par application, par équipe, par contrainte externe.
   2. Positionner/déplacer des initiatives et jalons ; Odin vérifie en continu la **cohérence** (dépendances, capacité, budget, fin de support technologique, échéances légales).
   3. Voir les **conflits** (capacité insuffisante, dépendance non satisfaite, échéance dépassée) avec une explication en une phrase.
   4. **Versionner** : publier une version (avec motif et décision associée), comparer à la version précédente.
@@ -229,11 +229,11 @@ Index : P-01 découverte · P-02 déposer un rapport · P-03 rédiger avec gabar
 - **Acteur** : R05, R10, R12, R13.
 - **Déclencheur** : cycle de planification ; vacances de poste ; arbitrage.
 - **Étapes**
-  1. *E-17 Capacité* : vue **par équipe et par profil** : capacité disponible (internes, prestataires) vs demande (initiatives engagées + run + dette + obligations), avec **taux de charge** agrégé.
+  1. *E-17 Capacité* : vue **par équipe et par profil** : capacité disponible (internes, prestataires) vs demande (initiatives engagées + run + dette + contraintes externes), avec **taux de charge** agrégé.
   2. Ajuster les **hypothèses** (congés, part de run, productivité) ; elles sont visibles et datées.
   3. Identifier **tensions** (profils ou compétences rares), **dépendance aux prestataires**, **vacances de postes** et durée.
   4. Simuler (P-12 scénarios) : recrutement, renfort prestataire, redéploiement entre équipes.
-  5. Suivre le **plafond d'emplois** (ETPT) et le schéma d'emplois : consommation vs plafond.
+  5. Si l'organisme suit un **plafond d'effectifs** (en ETPT ou autre unité) : consommation vs plafond.
 - **Alternatives** : équipe sous le seuil d'agrégation → métriques masquées ou remontées au niveau supérieur (RG-02) ; demande d'une **vue nominative** → refusée avec explication (RG-01).
 - **Résultat** : décisions de recrutement, de redéploiement et d'arbitrage fondées sur la capacité réelle par profil.
 - **Modules** : RSR, POR, ROA.
@@ -244,7 +244,7 @@ Index : P-01 découverte · P-02 déposer un rapport · P-03 rédiger avec gabar
 - **Acteur** : R09, R13, R12, R03/R04 (lecture).
 - **Déclencheur** : préparation budgétaire ; suivi mensuel ; arbitrage.
 - **Étapes**
-  1. *E-18 Finances* : budget par **programme / action / titre** (cadre de l'État), AE/CP, consommé, disponible ; distinction **run / build**.
+  1. *E-18 Finances* : budget selon la **nomenclature de l'organisme** (niveaux paramétrables), consommé, disponible ; distinction **run / build**.
   2. **Imputer** les dépenses aux applications, initiatives et services rendus (règles d'allocation visibles, déclarées par le contrôle de gestion).
   3. Voir le **coût complet** d'une application (licences, prestataires, hébergement, ETP valorisés **au niveau agrégé**).
   4. **Consolider** la dépense numérique de l'organisme (vue demandée par les corps de contrôle) ; exporter.
@@ -271,32 +271,32 @@ Index : P-01 découverte · P-02 déposer un rapport · P-03 rédiger avec gabar
 ## P-18. Piloter sécurité et risques
 
 - **Acteur** : R07 (principal), R13, R03/R04, R06.
-- **Déclencheur** : audit, constat, rapport de sécurité déposé, échéance d'homologation, revue périodique.
+- **Déclencheur** : audit, constat, rapport de sécurité déposé, échéance d'évaluation de sécurité, revue périodique.
 - **Étapes**
-  1. *E-20 Sécurité et risques* : **posture** (maturité par domaine), registre des risques, constats d'audit et de tests, homologations (validité), exceptions, plans d'action.
+  1. *E-20 Sécurité et risques* : **posture** (maturité par domaine), registre des risques, constats d'audit et de tests, évaluations de sécurité (validité), exceptions, plans d'action.
   2. Les **rapports de sécurité déposés** (N4) alimentent des faits que le RSSI **valide** ; les rattachements aux applications se font automatiquement sous sa supervision.
   3. Arbitrer : traiter, transférer, accepter un risque (**acceptation formelle** par l'autorité compétente, tracée, datée).
   4. Lier risques et **dette / obsolescence** : applications en fin de support exposées ; lier aux initiatives.
   5. Produire la **vue de direction** (synthèse sans détail technique sensible).
-- **Alternatives** : contenu technique sensible → affichage restreint ; homologation expirée → signal critique ; exception arrivant à échéance → relance.
+- **Alternatives** : contenu technique sensible → affichage restreint ; évaluation expirée → signal critique ; exception arrivant à échéance → relance.
 - **Résultat** : risques décidés et tracés ; sécurité intégrée aux arbitrages.
 - **Modules** : SEC, DET, DEC, TDB.
-- **Critères** : *Étant donné* une homologation expirant dans 60 jours, *quand* le seuil est atteint, *alors* le RSSI et le responsable d'application sont alertés et la direction voit la mention agrégée.
+- **Critères** : *Étant donné* une évaluation de sécurité expirant dans 60 jours, *quand* le seuil est atteint, *alors* le RSSI et le responsable d'application sont alertés et la direction voit la mention agrégée.
 
-## P-19. Suivre la conformité réglementaire
+## P-19. Suivre les contraintes et échéances externes
 
-- **Acteur** : R17 (tient le registre), R07, R08, R13 ; lecture R01.
-- **Déclencheur** : nouveau texte, échéance, évolution du statut juridique.
+- **Acteur** : R13, R12, R07, R08 ; tout rôle responsable d'un objet concerné.
+- **Déclencheur** : l'organisme identifie une obligation, un engagement ou une échéance qui s'impose à lui (réglementaire, tutelle, contractuelle, interne).
 - **Étapes**
-  1. *E-21 Registre réglementaire* : textes et doctrines avec **statut juridique** (en vigueur, adopté, en discussion), **date de dernière vérification**, **source**.
-  2. **Évaluer l'applicabilité** à l'organisme (oui, non, à confirmer) avec motif ; décliner en **obligations** concrètes.
-  3. Rattacher les obligations aux **applications, initiatives, équipes** ; suivre l'état de conformité et les échéances.
-  4. Voir le **calendrier consolidé** des échéances (réglementaires, doctrines, calendrier ministériel).
-  5. En cas de changement de statut d'un texte : alerte aux responsables concernés ; mise à jour de la roadmap proposée.
-- **Alternatives** : texte non vérifié depuis X mois → badge « à revérifier » ; obligation sans responsable → signal.
-- **Résultat** : l'organisme sait ce qui s'applique, à qui et pour quand.
-- **Modules** : REG, ROA, SEC.
-- **Critères** : *Étant donné* un texte dont le statut passe à « en vigueur », *quand* l'administrateur le met à jour, *alors* les obligations associées sont activées et leurs responsables notifiés.
+  1. *E-21 Contraintes et échéances* : saisir une contrainte (libellé, **source en texte libre**, nature, échéance, responsable). L'organisme en reste seul maître ; Odin ne fournit pas de liste de textes.
+  2. Indiquer son **applicabilité** (applicable, à confirmer, non applicable avec motif) et son **état** (à venir, en écart, satisfaite).
+  3. **Rattacher** la contrainte aux applications, initiatives et équipes concernées.
+  4. Voir le **calendrier consolidé** et la couche d'échéances sur la roadmap ; marquer « non arbitrable » une échéance ferme.
+  5. Recevoir des **alertes** à l'approche des échéances ; un rapport déposé qui mentionne une contrainte lui est rattaché (proposition à confirmer).
+- **Alternatives** : contrainte sans responsable → signal ; non mise à jour depuis longtemps → badge « à revoir » ; import d'une liste existante de l'organisme.
+- **Résultat** : les échéances externes pèsent dans les arbitrages sans qu'Odin porte de procédure officielle.
+- **Modules** : REG, ROA, POR.
+- **Critères** : *Étant donné* une contrainte « non arbitrable » avec échéance, *quand* un scénario retarde l'initiative liée au-delà de l'échéance, *alors* le scénario affiche un conflit explicite.
 
 ## P-20. Préparer un comité et formaliser une décision
 
@@ -361,19 +361,18 @@ Index : P-01 découverte · P-02 déposer un rapport · P-03 rédiger avec gabar
 - **Modules** : TDB, OBJ, RST.
 - **Critères** : *Étant donné* un indicateur dégradé, *quand* le décideur clique « Pourquoi ? », *alors* Odin affiche les 3 faits contributeurs principaux et leurs sources.
 
-## P-24. Audit et contrôle externe : preuves et recommandations
+## P-24. Traçabilité et justification d'une décision
 
-- **Acteur** : R15 ; R13, R12, R17 (répondent).
-- **Déclencheur** : mission de contrôle ou d'audit ; recommandation reçue.
+- **Acteur** : R15 (auditeur / contrôle interne) ; R13, R12 (répondent).
+- **Déclencheur** : besoin de justifier une décision ou de répondre à une demande d'explication (interne ou externe).
 - **Étapes**
-  1. *E-26 Espace audit* : saisie des **recommandations** reçues (origine, objet, échéance) ; rattachement aux initiatives, applications ou décisions.
-  2. L'auditeur consulte le **journal** (qui a déposé, validé, décidé, consulté un contenu sensible) et le **dossier de preuve** d'une décision (faits, versions, sources au jour J).
-  3. Suivi des **réponses** et plans d'action, de leur échéance et de leur état ; relances.
-  4. **Consolidation de la dépense numérique** et autres états demandés ; export reproductible.
+  1. *E-26 Traçabilité* : ouvrir le **dossier de preuve** d'une décision (options, critères, hypothèses, faits au jour J, versions, auteurs et validateurs).
+  2. Consulter le **journal** (qui a déposé, validé, décidé, consulté un contenu sensible, utilisé l'IA).
+  3. Produire des **états consolidés** exportables (dont la consolidation de la dépense numérique), reproductibles.
 - **Alternatives** : preuve manquante → signal ; accès sensible → demande d'habilitation tracée.
-- **Résultat** : organisme prêt à être audité ; recommandations suivies jusqu'à clôture.
+- **Résultat** : toute décision et tout chiffre sont justifiables sans reconstitution manuelle.
 - **Modules** : AUD, DEC, FIN.
-- **Critères** : *Étant donné* une recommandation échue non traitée, *quand* l'échéance est dépassée, *alors* le responsable et le décideur sont alertés.
+- **Critères** : *Étant donné* une décision ancienne, *quand* l'auditeur ouvre son dossier, *alors* il voit les options, hypothèses et faits tels qu'ils étaient le jour de la décision.
 
 ## P-25. Qualité des données et curation
 
@@ -394,7 +393,7 @@ Index : P-01 découverte · P-02 déposer un rapport · P-03 rédiger avec gabar
 - **Acteur** : R17 (administrateur fonctionnel).
 - **Déclencheur** : mise en service ; évolution des règles ; départ de personnes.
 - **Étapes**
-  1. *E-28 Administration* : **organisation** (directions, équipes), **référentiels** (profils, compétences, types de rapports, nature de faits), **gabarits**, **seuils et règles de santé**, **calendrier des instances**, **registre réglementaire**, **niveaux de classification**, **grille de priorisation**, **seuil d'effectif d'agrégation**, **politique de conservation**.
+  1. *E-28 Administration* : **organisation** (directions, équipes), **référentiels** (profils, compétences, types de rapports, nature de faits), **gabarits**, **seuils et règles de santé**, **calendrier des instances**, **contraintes externes**, **niveaux de classification**, **grille de priorisation**, **seuil d'effectif d'agrégation**, **politique de conservation**.
   2. Gestion des **rôles et périmètres** : affectation, délégations, expirations (prestataires).
   3. **Aperçu d'impact** avant toute modification de règle (quels indicateurs changeront) ; journal des modifications.
   4. Paramétrer les **sources d'alimentation** et leur fréquence (fonctionnel).

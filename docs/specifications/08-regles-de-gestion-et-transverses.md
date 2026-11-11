@@ -16,7 +16,7 @@
 | **RG-23** | **Signalement discret** : un utilisateur peut transmettre un signalement à un rôle précis (RSSI, référent) sans exposer son identité aux autres lecteurs ; l'identité reste connue du rôle destinataire et des auditeurs habilités. |
 | **RG-24** | **Alerte protégée** : Odin ne se substitue pas à la procédure légale de recueil des alertes. Lorsqu'un contenu relève manifestement de ce cadre (faits graves, infraction, mise en cause de personnes), Odin affiche le renvoi vers la procédure de l'organisme, n'analyse pas le contenu et ne le diffuse pas. |
 | **RG-31** | **Contributeurs externes** : visibilité limitée aux périmètres ouverts ; droits expirant avec le contrat ; aucune visibilité sur les contenus N3/N4 hors habilitation explicite. |
-| **RG-32** | **Informations classifiées de défense** : non admises dans Odin (hypothèse à confirmer, Q-04) ; avertissement permanent ; tout contenu soupçonné est écarté et signalé à l'administrateur de sécurité. |
+| **RG-32** | **Classification configurable** : l'organisme définit ses niveaux (libellés, nombre, règles d'habilitation), y compris de diffusion restreinte ou de défense ; **tout contenu est admissible** (D7). Odin applique cloisonnement et héritage de niveau ; l'**habilitation des personnes** à chaque niveau relève de l'organisme, qui héberge sa propre instance (D6). |
 
 ### 1.2 Faits, santé, qualité
 
@@ -35,8 +35,8 @@
 | ID | Règle |
 |---|---|
 | **RG-12** | Toute initiative sert au moins un objectif ou un service rendu ; à défaut elle est marquée **« hors stratégie »** et visible comme telle. |
-| **RG-13** | Une obligation réglementaire ou doctrinale applicable avec échéance ferme rend l'initiative **« non arbitrable »** (pas de report sans décision explicite et motivée) ; elle est traitée en contrainte dans les scénarios. |
-| **RG-14** | Les **avis obligatoires** (instance interministérielle, sécurité, protection des données…) et leurs **seuils** sont des **paramètres datés** ; leur valeur initiale (par exemple le seuil financier d'avis de l'instance interministérielle) est à **vérifier** avant mise en service : les sources de la recherche divergent (9 ou 15 M€). |
+| **RG-13** | Une **contrainte externe** marquée « non arbitrable » (échéance ferme) interdit tout report de l'initiative liée au-delà de l'échéance sans décision explicite et motivée ; elle est traitée en contrainte dans les scénarios. |
+| **RG-14** | **Aucune procédure imposée** : les étapes d'avis ou de validation, leurs seuils et leurs acteurs sont définis par l'organisme ; Odin n'embarque ni seuils officiels ni circuits réglementaires (D5). |
 | **RG-15** | La **priorisation** est explicable : chaque score montre la contribution de chaque critère ; **grille et pondérations sont versionnées** et rattachées aux décisions qui les ont utilisées. |
 | **RG-27** | Une **roadmap publiée** est une version immuable liée à une décision ; toute évolution crée une nouvelle version ; la comparaison entre versions est disponible. |
 | **RG-35** | Une **dette acceptée** a un motif, une durée et une date de revue ; sans revue elle redevient « à traiter ». |
@@ -46,7 +46,7 @@
 
 | ID | Règle |
 |---|---|
-| **RG-16** | **Unités RH** : capacité et charge en **ETP** ; suivi du plafond d'emplois en **ETPT** (moyenne annualisée) ; la **règle de conversion** ETP ↔ ETPT (quotité, présence sur l'année) est paramétrée, visible et expliquée. Les plafonds et schémas d'emplois sont saisis par la fonction habilitée. |
+| **RG-16** | **Unités RH** : capacité et charge en **ETP** ; si l'organisme suit un plafond d'effectifs (par exemple en **ETPT**), la **règle de conversion** (quotité, présence sur l'année) est paramétrée, visible et expliquée. |
 | **RG-17** | **Imputation financière** : les règles d'allocation des coûts partagés (hébergement, licences communes) sont déclarées par le contrôle de gestion, visibles et versionnées ; une dépense non imputée est comptée et signalée. |
 | **RG-18** | **Run / build** : classification selon une règle paramétrable (maintenance et exploitation = run ; évolution et projets = build) ; les dépenses ambiguës sont arbitrées par le contrôle de gestion. |
 | **RG-19** | **Échéances de contrats** : alertes graduées paramétrables (par défaut 180/90/30 jours avant le préavis) ; un préavis dépassé crée un signal critique avec les options restantes. |
@@ -60,7 +60,7 @@
 | **RG-26** | **Décision** : tout enregistrement comporte options, critères, hypothèses, décideur, motifs ; une décision **contraire à la recommandation** exige un motif ; une **date de bilan** est obligatoire ; la photo des faits au jour de la décision est conservée. |
 | **RG-20** | **Conservation** : durées par type d'objet fixées par la politique de l'organisme (rapports, faits, journaux, décisions, restitutions), conformément à ses obligations d'archivage ; à échéance, archivage ou effacement tracé. |
 | **RG-21** | **Retrait, rectification, effacement** : l'auteur peut retirer un rapport ou demander la rectification d'un fait le concernant ; la demande suit un circuit (responsable de l'objet, DPO) avec délai de réponse ; une obligation de conservation ou une décision tracée qui s'appuie sur le contenu limite l'effacement (le motif est exposé). |
-| **RG-28** | **Textes et règles externes** : toute règle issue d'un texte ou d'une doctrine est une **donnée datée** (source, statut juridique, date de vérification). Un statut incertain est affiché comme tel ; Odin ne le présente jamais comme acquis. |
+| **RG-28** | **Contraintes externes saisies par l'organisme** : source en texte libre, date de dernière mise à jour, responsable ; Odin n'en garantit pas l'exactitude et signale les contraintes **non revues** depuis un délai paramétrable (« à revoir »). |
 | **RG-29** | **Notifications neutres** : aucune notification ne révèle de contenu N3/N4 à un non-habilité. |
 | **RG-30** | **Langage non accusatoire** : relances, signaux et indicateurs de couverture parlent de dispositif, d'objet et de rôle, jamais de défaillance d'une personne. |
 
@@ -70,24 +70,24 @@ Les valeurs chiffrées sont des **objectifs de départ** à confirmer ; leur ré
 
 ### 2.1 Confidentialité et sécurité (besoin)
 
-- **ET-01.** Les contenus de l'organisme sont traités dans des conditions de **confidentialité, de souveraineté et d'hébergement** conformes aux exigences de l'État applicables à leur sensibilité (doctrine d'hébergement, référentiels de sécurité). Le niveau exigé (par exemple qualification de l'hébergement, exploitation interne) est à instruire en phase technique ; **question ouverte Q-05**.
-- **ET-02.** L'**homologation de sécurité** de la plateforme avant ouverture, selon la procédure de l'organisme, est une condition de mise en service.
+- **ET-01.** **Auto-hébergement (D6)** : chaque organisme héberge sa propre instance ; tous les contenus et tous les traitements d'IA restent dans l'infrastructure de l'organisme, sans dépendance obligatoire à un service externe. Les moyens (infrastructure, modèles) relèvent de la phase technique.
+- **ET-02.** Les **mesures de sécurité de la plateforme** (durcissement, sauvegardes, contrôle d'accès) relèvent de l'organisme qui l'héberge ; Odin fournit les fonctions de cloisonnement, de journalisation et de contrôle d'accès décrites ici.
 - **ET-03.** **Cloisonnement strict** des contenus N4 et des périmètres ; aucun accès par défaut des administrateurs.
 - **ET-04.** **Traçabilité** de tous les accès et actions significatives (EX-AUD-01).
 - **ET-05.** L'**IA** respecte les mêmes règles de confidentialité que l'utilisateur (IA-10, IA-11, IA-18).
 
 ### 2.2 Protection des données personnelles et droit des agents
 
-- **ET-06.** Une **analyse d'impact relative à la protection des données (AIPD)** est réalisée avant la mise en service ; le **DPO** est associé dès la conception.
-- **ET-07.** Les **instances de dialogue social** compétentes (comité social d'administration ou équivalent) sont **informées et consultées** selon les règles applicables avant le déploiement ; une note d'information aux agents précise les finalités et les garanties (pas d'évaluation individuelle, agrégation, transparence sur l'IA).
+- **ET-06.** **Recommandation de déploiement** (non bloquante) : associer le DPO dès la conception et réaliser une analyse d'impact si l'organisme le juge nécessaire.
+- **ET-07.** **Recommandation** : informer les agents et les instances de dialogue social de l'organisme des finalités et garanties (pas d'évaluation individuelle, agrégation, transparence sur l'IA).
 - **ET-08.** **Finalité limitée** : les données de contribution ne servent à aucun usage d'évaluation, de contrôle d'activité ou de décision individuelle (RG-01).
-- **ET-09.** **Qualification juridique de l'IA** : une revue (juridique, DPO) vérifie que l'usage d'IA d'Odin ne relève pas d'une catégorie « à haut risque » (gestion des travailleurs), au regard du cadre européen applicable et de son calendrier (calendrier non tranché dans la recherche). **Hypothèse de conception** : l'évitement structurel de tout usage individuel (RG-01, RG-02, IA-08, IA-09) est la mesure principale ; la qualification n'est pas laissée à la seule interprétation.
+- **ET-09.** **Qualification de l'IA** : par construction, Odin n'évalue pas les personnes (RG-01, RG-02, IA-08, IA-09), ce qui limite structurellement les usages « gestion des travailleurs » ; une revue juridique éventuelle reste de la responsabilité de l'organisme.
 - **ET-10.** **Droits des agents** : accès, rectification, retrait, information sur l'usage de leurs contributions (P-27).
 
 ### 2.3 Accessibilité, ergonomie, langue
 
-- **ET-11.** Conformité au **référentiel d'accessibilité** applicable aux services numériques de l'État (visée AA), pour l'application et les documents produits. 
-- **ET-12.** **Charte graphique** et **identité** de l'organisme ou de l'État (à confirmer, Q-12).
+- **ET-11.** **Accessibilité** : niveau choisi par l'organisme (visée recommandée AA) pour l'application et les documents produits.
+- **ET-12.** **Charte graphique** et identité **configurables** par l'organisme.
 - **ET-13.** Interface en **français** ; vocabulaire paramétrable ; aide contextuelle.
 
 ### 2.4 Disponibilité, performance perçue, continuité
@@ -108,7 +108,7 @@ Les valeurs chiffrées sont des **objectifs de départ** à confirmer ; leur ré
 ### 2.6 Alimentations et interfaces (besoins, sans choix technique)
 
 - **ET-23.** **Alimentation initiale** du référentiel (applications, organisation) par import de fichiers ou de sources de l'organisme.
-- **ET-24.** **Alimentations récurrentes** souhaitables (par ordre de valeur) : sources financières de l'État (dépenses imputées), sources RH agrégées (effectifs par profil, plafonds), outils de suivi de projets et de développement (jalons, volumes), outils de gestion de services (incidents), outils de gestion de risques et de cartographie, bases publiques (calendrier de fin de support des technologies, bases ouvertes de l'État comme le panorama des grands projets).
+- **ET-24.** **Alimentations récurrentes** souhaitables (par ordre de valeur) : sources financières de l'organisme (dépenses imputées), sources RH agrégées (effectifs par profil, plafonds), outils de suivi de projets et de développement (jalons, volumes), outils de gestion de services (incidents), outils de gestion de risques et de cartographie, bases publiques (calendrier de fin de support des technologies, bases ouvertes de l'État comme le panorama des grands projets).
 - **ET-25.** Chaque alimentation déclare sa **fiabilité** (F3 si objective), sa **fréquence** et son **périmètre**.
 - **ET-26.** **Ouverture** : Odin expose aux autres outils de l'organisme les objets et indicateurs, selon les droits.
 

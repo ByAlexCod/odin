@@ -9,8 +9,8 @@
 | **Nadia, responsable d'application** | Porte une application (évolutions, incidents, fin de support) | Une fiche vivante, alimentée par les rapports, et qui défend son budget | Données obsolètes ; fiche qu'elle doit tout remplir |
 | **Paul, chef de bureau / responsable d'équipe** | Équipe de 8 personnes, plan de charge, recrutement | Capacité vs demande, vacances de postes, besoins de compétences | Vue individuelle exigée par la hiérarchie ; chiffres jugés injustes |
 | **Sophie, architecte / urbaniste** | Cartographie, trajectoires, principes d'architecture | Référentiel qui se met à jour avec les rapports ; analyses d'impact | Référentiel périmé, double maintenance |
-| **Marc, RSSI** | Posture, risques, homologations, audits | Remontées de sécurité reliées aux applications ; dossier pour la direction | Confidentialité insuffisante des contenus sensibles |
-| **Léa, contrôleuse de gestion SI** | Budget, exécution, coûts par service | Consolidation de la dépense numérique, run / build | Chiffres hors périmètre budgétaire de l'État ; rapprochements manuels |
+| **Marc, RSSI** | Posture, risques, évaluations de sécurité, audits | Remontées de sécurité reliées aux applications ; dossier pour la direction | Confidentialité insuffisante des contenus sensibles |
+| **Léa, contrôleuse de gestion SI** | Budget, exécution, coûts par service | Consolidation de la dépense numérique, run / build | Chiffres hors périmètre budgétaire de l'organisme ; rapprochements manuels |
 | **Hélène, responsable RH du numérique** | GEPP, recrutements, profils, prestataires | Capacité par profil, tensions de compétences, dépendances | Outil qui évalue les individus ; données nominatives exposées |
 | **Antoine, directeur du numérique (DNUM)** | Arbitrages, comités, relation avec le cabinet et la tutelle | Vue unifiée, scénarios, notes et présentations prêtes, traçabilité | Chiffres non fiables ; rapports non défendables devant un contrôle |
 | **Isabelle, secrétaire générale / directrice (lectrice décisionnelle)** | Reçoit synthèses et alertes | Une synthèse claire, des décisions à prendre, peu de jargon | Trop de détails ; jargon technique |
@@ -39,7 +39,7 @@ Un utilisateur peut cumuler plusieurs rôles. Les rôles sont **fonctionnels** (
 | R14 | **Lecteur de direction** (secrétariat général, cabinet, tutelle) | Lecture des synthèses, des alertes et des restitutions ; aucune saisie technique. |
 | R15 | **Auditeur / contrôle interne** | Lecture seule étendue, accès au journal et aux preuves ; pas d'accès aux contenus sensibles hors habilitation. |
 | R16 | **Curateur de connaissance** | Valide en second niveau les faits extraits (par domaine) ; traite les rattachements ambigus. Rôle attribuable à un référent par domaine. |
-| R17 | **Administrateur fonctionnel** | Paramètre référentiels, gabarits, seuils, registre réglementaire, droits ; n'a pas accès aux contenus sensibles par défaut. |
+| R17 | **Administrateur fonctionnel** | Paramètre référentiels, gabarits, seuils, droits ; n'a pas accès aux contenus sensibles par défaut. |
 
 ## 3. Périmètres de visibilité
 
@@ -56,7 +56,7 @@ Chaque contenu (rapport, fait, objet) a un **niveau de classification** et un **
 
 - Le niveau par défaut d'un rapport est **N2** (périmètre de son rattachement). L'auteur peut le **restreindre** (N3) mais ne peut pas l'élargir au-delà de ce que son rôle l'autorise.
 - Une **suggestion automatique de niveau** est faite à l'auteur (ex. détection de contenu de sécurité → N4 proposé) ; l'auteur ou un référent confirme (voir IA-07).
-- Les contenus classifiés de défense ne doivent **pas** être déposés (message d'avertissement permanent ; question Q-04).
+- Les **niveaux de classification sont configurables** par l'organisme (libellés, nombre, règles d'habilitation), y compris des niveaux de diffusion restreinte ou de défense ; **tout contenu est admissible** (D7). La protection repose sur le cloisonnement et les habilitations ; l'**habilitation des personnes** à chaque niveau relève de l'organisme. Les quatre niveaux ci-dessus sont le jeu par défaut.
 
 ### 3.2 Principe de dérivation
 
@@ -87,7 +87,7 @@ Les droits s'exercent **dans le périmètre** attribué (sauf mention « tout »
 | Gérer finances | – | – | L (son appli) | L (son projet) | – | – | – | M | – | L | L | L (synthèse) | L | – | – |
 | Gérer contrats et marchés | – | – | L (son appli) | L (son projet) | – | L | – | L | – | L | L | L (synthèse) | L | – | – |
 | Sécurité et risques (N4) | C (signal) | – | L (son appli) | L (son projet) | – | L | M | – | – | L | V (acceptation) | L (synthèse) | L (habilité) | – | – |
-| Registre réglementaire | L | – | L | L | L | L | M (sécurité) | L | L | L | V | L | L | – | A |
+| Contraintes et échéances | L | – | L | L | L | L | M (sécurité) | L | L | L | V | L | L | – | A |
 | Décisions et comités | L (publiques) | – | L | L | L | L | L | L | L | M | V | L | L | – | – |
 | Générer rapports / présentations | C (son périmètre) | – | C | C | C | C | C | C | C | C | C | L | – | – | – |
 | Assistant (questions) | C | C (périmètre) | C | C | C | C | C | C | C | C | C | C | C | C | C |

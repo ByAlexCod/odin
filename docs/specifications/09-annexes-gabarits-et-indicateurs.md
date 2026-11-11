@@ -1,4 +1,4 @@
-# 09. Annexes : gabarits de rapports, catalogue d'indicateurs, registre réglementaire initial
+# 09. Annexes : gabarits de rapports, catalogue d'indicateurs, exemples de contraintes
 
 ## 1. Gabarits de rapports (bibliothèque initiale)
 
@@ -17,11 +17,11 @@ Chaque gabarit : **public/auteur**, **périodicité**, **durée de validité**, 
 | G-09 | **État d'une application** | Responsable d'application | Trimestrielle | 120 j | Santé, évolutions, incidents, fin de support, dette, coûts, perspectives | Dette, incident, dépendance, budget |
 | G-10 | **Bilan de projet** | Responsable de projet | À la clôture | 24 mois | Réalisé vs prévu, bénéfices constatés, coûts, enseignements | Bénéfice, budget, avancement |
 | G-11 | **Note de veille** | Architecte / contributeur | Libre | 12 mois | Sujet, enjeux pour l'organisme, recommandations | Alerte, dépendance |
-| G-12 | **Demande de dérogation / exception** | Responsable d'application | À l'événement | Selon durée | Règle concernée, justification, durée, mesures compensatoires | Sécurité, conformité |
+| G-12 | **Demande de dérogation / exception** | Responsable d'application | À l'événement | Selon durée | Règle concernée, justification, durée, mesures compensatoires | Sécurité, contrainte externe |
 | G-13 | **État des contrats et fournisseurs** | Achats | Trimestrielle | 120 j | Échéances, dépendances, difficultés | Fournisseur/contrat |
 | G-14 | **Point budgétaire** | Contrôle de gestion | Mensuelle | 45 j | Consommé, prévisions, écarts, run/build | Budget |
 | G-15 | **Point ressources (agrégé)** | RH du numérique | Trimestrielle | 120 j | Vacances par profil, tensions, dépendances prestataires | Ressources |
-| G-16 | **Point conformité** | Référent conformité / DPO | Trimestrielle | 120 j | Textes, obligations, états, échéances | Conformité |
+| G-16 | **Point contraintes et échéances** | Responsable de contrainte | Trimestrielle | 120 j | Contraintes, états, échéances | Contrainte externe |
 | G-17 | **Satisfaction et qualité de service** | Responsable de service | Trimestrielle | 120 j | Retours d'usage, indicateurs de qualité | Satisfaction |
 | G-18 | **Document libre** | Tout contributeur | — | 12 mois | — | Selon extraction |
 
@@ -32,19 +32,18 @@ Règles d'écriture communes affichées dans l'éditeur : *décrire des faits et
 | # | Restitution | Audience | Contenu type | Périodicité |
 |---|---|---|---|---|
 | R-01 | **Résumé hebdomadaire de direction** | DNUM, direction | Faits marquants, alertes, décisions à venir (1 page) | Hebdomadaire |
-| R-02 | **Tableau de bord mensuel du DNUM** | DNUM | Objectifs, portefeuille, dette, sécurité, ressources, finances, conformité | Mensuelle |
+| R-02 | **Tableau de bord mensuel du DNUM** | DNUM | Objectifs, portefeuille, dette, sécurité, ressources, finances, contraintes externes | Mensuelle |
 | R-03 | **Revue de portefeuille** | Comité d'investissement | Initiatives, santé, dérives, arbitrages proposés | Trimestrielle |
 | R-04 | **Note de décision** | Instance | Voir fichier 06 §5 | À la demande |
 | R-05 | **Point sécurité pour la direction** | Direction générale | Posture, risques majeurs, échéances, décisions | Trimestrielle |
 | R-06 | **Dossier d'arbitrage budgétaire** | Direction financière / tutelle | Besoins, options, impacts, coût de l'inaction | Annuelle |
 | R-07 | **Rapport d'activité annuel du numérique** | Direction, tutelle | Réalisations, indicateurs, dette, sécurité, bénéfices | Annuelle |
 | R-08 | **Présentation de roadmap** | Direction, tutelle, élus | Vision, horizons, décisions, risques | Semestrielle |
-| R-09 | **Dossier de passage en instance d'avis (grands projets)** | Instance d'avis | Stratégie, finances, gouvernance, réalisation, planning | À la demande |
+| R-09 | **Dossier de présentation pour une instance** | Instance de décision | Contexte, finances, gouvernance, réalisation, planning (structure paramétrable) | À la demande |
 | R-10 | **Bilan de projet** | Direction, comité | Réalisé vs prévu, bénéfices, enseignements | À la clôture |
 | R-11 | **Revue des contrats** | DNUM, achats | Échéances, dépendances, décisions | Trimestrielle |
-| R-12 | **Point conformité** | Direction | Textes, obligations, états, échéances | Trimestrielle |
+| R-12 | **Point contraintes et échéances** | Direction | Contraintes, états, échéances | Trimestrielle |
 | R-13 | **Consolidation de la dépense numérique** | Direction financière, contrôle | Dépense par programme/titre/application, run/build | Annuelle et à la demande |
-| R-14 | **Suivi des recommandations de contrôle** | Direction, audit | Recommandations, réponses, échéances | Trimestrielle |
 | R-15 | **Synthèse pour une équipe** | Équipe | Ce qui a changé sur son périmètre | Mensuelle |
 
 ## 3. Catalogue d'indicateurs
@@ -92,7 +91,7 @@ Principes : peu d'indicateurs, chacun relié à une **décision**. Pour chaque i
 | I-31 | Vacances de postes | Postes vacants et durée moyenne, par profil | R | Recruter |
 | I-32 | Dépendance aux prestataires | Part de capacité externe, par profil/application | R | Internaliser, sécuriser |
 | I-33 | Rôles à risque | Profils ou compétences portés par peu de personnes (sans nom) | A | Transmettre, former |
-| I-34 | Consommation du plafond d'emplois | ETPT / plafond | R | Recrutement possible |
+| I-34 | Consommation du plafond d'effectifs (si suivi) | Effectifs / plafond | R | Recrutement possible |
 | I-35 | Part du run | Capacité de run / totale | R | Libérer des marges |
 
 ### 3.5 Finances
@@ -120,20 +119,19 @@ Principes : peu d'indicateurs, chacun relié à une **décision**. Pour chaque i
 |---|---|---|---|---|
 | I-60 | Posture de sécurité | Maturité par domaine (référentiel retenu) | R | Investir |
 | I-61 | Risques majeurs ouverts | Nombre, ancienneté, acceptés vs traités | A | Traiter, accepter |
-| I-62 | Applications critiques homologuées | % avec homologation valide | A | Homologuer |
+| I-62 | Applications critiques avec évaluation de sécurité valide | % avec évaluation valide | A | Faire évaluer |
 | I-63 | Remédiation des constats | % remédiés dans les délais | R | Mobiliser |
 | I-64 | Exceptions en cours | Nombre et échéances | A | Rattraper |
 | I-65 | Tests de continuité | % d'applications critiques testées sur 12 mois | A | Tester |
 | I-66 | Applications obsolètes exposées | Fin de support × criticité × exposition | A | Prioriser la dette de sécurité |
 
-### 3.8 Conformité
+### 3.8 Contraintes externes
 
 | ID | Indicateur | Définition | Type | Décision |
 |---|---|---|---|---|
-| I-70 | Obligations en écart | Nombre, criticité, échéance | A | Plan de conformité |
-| I-71 | Échéances réglementaires à 90 jours | Nombre | A | Anticiper |
-| I-72 | Textes à revérifier | Nombre de textes non vérifiés depuis N mois | A | Veille |
-| I-73 | Applications soumises à des obligations d'accessibilité / numérique responsable | Part conforme | R | Corriger |
+| I-70 | Contraintes externes en écart | Nombre, criticité, échéance | A | Plan d'action |
+| I-71 | Échéances externes à 90 jours | Nombre | A | Anticiper |
+| I-72 | Contraintes non revues | Contraintes non mises à jour depuis N mois | A | Mettre à jour |
 
 ### 3.9 Service rendu et satisfaction
 
@@ -154,44 +152,33 @@ Principes : peu d'indicateurs, chacun relié à une **décision**. Pour chaque i
 | I-94 | Délai de revue | Médiane dépôt → faits validés | A | Fluidifier |
 | I-95 | Qualité de l'IA | Taux de faits confirmés tels quels ; taux de rejets | A | Améliorer la configuration |
 | I-96 | Décisions bilanées | % de décisions avec bilan fait | R | Boucle de décision |
-| I-97 | Recommandations de contrôle en retard | Nombre | A | Traiter |
 
 Règle : tout indicateur est **supprimable** s'il ne déclenche plus aucune décision pendant deux cycles de revue.
 
-## 4. Registre réglementaire initial proposé (à vérifier)
+## 4. Contraintes externes : exemples de saisie (non normatifs)
 
-Liste **proposée à titre de jeu initial**, issue de la recherche ; **chaque statut doit être vérifié sur le texte officiel avant mise en service** (EX-REG-09, RG-28). Les divergences de sources relevées sont signalées.
+Odin **ne livre aucun registre de textes** (D5). L'organisme saisit les contraintes qui pèsent sur ses décisions. Exemples du type d'éléments qu'une organisation peut y consigner :
 
-| Texte / doctrine | Nature | Pourquoi dans Odin | Point à vérifier |
-|---|---|---|---|
-| Décret de gouvernance des SI de l'État (avis de l'instance interministérielle au-delà d'un seuil) | Texte | Avis obligatoire des grands projets | **Seuil : 9 ou 15 M€** (source de presse unique pour le relèvement) |
-| Doctrine « cloud au centre » et dispositions législatives associées | Doctrine + loi | Choix d'hébergement, contrôle des contrats SaaS | Dates de mise à jour (mai 2023) ; décret d'application annoncé en 2026 |
-| Politique de sécurité des systèmes d'information de l'État, homologation, référentiel général de sécurité | Doctrine / référentiel | Homologation, sécurité des SI | Version en vigueur ; mise à jour annoncée |
-| Feuille de route cybersécurité 2026-2027 de l'État | Doctrine | Échéances (homologation des SI à enjeux, authentification forte des administrateurs) | Texte officiel non lu ; échéances rapportées |
-| Directive européenne sur la cybersécurité (NIS 2) et projet de loi de transposition | Loi | Obligations de sécurité et de gouvernance | **Non promulguée au 11/11/2026** selon la recherche ; périmètre « administrations » incertain |
-| Règlement européen sur l'IA et ses reports | Règlement | Registre des systèmes d'IA, niveau de risque | **Calendrier des obligations « haut risque »** (report annoncé ; adoption formelle à confirmer) |
-| Règlement sur la protection des données personnelles | Règlement | Registre des traitements, AIPD | Texte non analysé dans la recherche |
-| Règlement européen sur la résilience cyber des produits | Règlement | Chaîne d'approvisionnement logicielle | Dates d'application à vérifier |
-| Règlement sur les données (Data Act) | Règlement | Gouvernance des données, fournisseurs | Non analysé |
-| Référentiels d'accessibilité numérique | Référentiel | Applications et documents | Version applicable ; sanctions (sources divergentes) |
-| Référentiel d'écoconception de services numériques | Référentiel | Numérique responsable | Valeur juridique à confirmer |
-| Règles budgétaires de l'État (LOLF) | Loi organique | Imputation, programmes, plafonds d'emplois | Non analysé en détail |
-| Évaluation socio-économique des investissements publics (seuil d'obligation) | Guide / circulaire | Dossier de grands projets | Seuil (20 M€ cité) |
-| Dispositifs de signalement des alertes | Loi | Renvoi RG-24 | Décret d'application ; procédure de l'organisme |
-| Orientations de l'État sur l'IA (plan et assistant interministériel) | Doctrine | Usage de l'IA dans Odin | Statut et accès pour l'organisme |
-| Circulaires de rémunération et référentiel de métiers du numérique de l'État | Référentiel | Profils (D2) | Version en vigueur |
+| Nature | Exemple de libellé (libre) | Ce que ça change pour la décision |
+|---|---|---|
+| Échéance de sécurité | Authentification forte des administrateurs avant fin d'année | Initiative « non arbitrable » |
+| Obligation d'hébergement | Migration d'une application vers un hébergement interne | Dépendance et capacité à planifier |
+| Échéance de fin de support | Fin du support d'une technologie majeure | Dette et roadmap |
+| Engagement vis-à-vis de la tutelle | Livrer le service X au T3 | Priorisation et scénarios |
+| Échéance contractuelle | Préavis d'un marché structurant | Décision de renouvellement |
+| Exigence d'accessibilité ou de sobriété | Mise en conformité d'un service usagers | Initiative et budget |
 
-**Règle** : Odin affiche pour chaque ligne la date de vérification, la source et le statut ; tout texte non vérifié depuis un délai paramétrable est marqué « à revérifier ».
+Chaque contrainte est saisie avec une **source libre**, un **responsable** et une **échéance** ; Odin ne vérifie pas son exactitude (RG-28).
 
 ## 5. Référentiel de profils (D2) : structure proposée
 
 - **Famille** (ex. conduite de projets, développement, architecture, production et exploitation, sécurité, données et IA, support, pilotage et gestion).
-- **Profil** (intitulé du référentiel de l'État ou, à défaut, du référentiel de la profession).
+- **Profil** (intitulé du référentiel choisi par l'organisme).
 - **Niveau** (junior, confirmé, senior, expert).
 - **Statut d'emploi** (titulaire, contractuel, prestataire) pour la dépendance aux externes.
 - **Compétences associées** (liste de compétences et technologies).
 
-Le référentiel retenu (référentiel de l'État, nomenclature de la profession ou hybride) est une **question ouverte** (Q-09).
+Le référentiel est **configurable par l'organisme** (référentiel de l'État, nomenclature de la profession ou référentiel propre) ; le jeu par défaut reste à choisir (Q-09).
 
 ## 6. Typologie de risques et de dette (listes de départ)
 

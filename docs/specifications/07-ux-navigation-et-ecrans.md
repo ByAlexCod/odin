@@ -29,8 +29,8 @@ Les maquettes ci-dessous sont des **schémas fonctionnels en texte** : elles fix
 | **Dette** | Registre de dette, obsolescence | Tous (lecture) ; gestion selon rôles |
 | **Ressources** | Capacité, charge, vacances, dépendances (agrégé) | R05, R10, R12, R13 |
 | **Finances et contrats** | Budget, dépenses, marchés, licences | R09, R11, R12, R13 + lecture ciblée |
-| **Sécurité et conformité** | Risques, homologations, registre réglementaire | R07, R08, R13 + lecture ciblée |
-| **Décisions** | Comités, notes, registre des décisions, recommandations de contrôle | Tous (publiques) ; gestion R12, R13 |
+| **Sécurité et contraintes** | Risques, évaluations de sécurité, contraintes et échéances externes | R07, R08, R13 + lecture ciblée |
+| **Décisions** | Comités, notes, registre des décisions | Tous (publiques) ; gestion R12, R13 |
 | **Restitutions** | Atelier de rapports et présentations, bibliothèque | Tous (selon droits) |
 | **Assistant** | Questions en langage naturel | Tous |
 | **Qualité** | Santé du référentiel, files de curation | R16, R06, R12, R17 |
@@ -107,7 +107,7 @@ Le **contributeur simple** (R01) voit seulement : Accueil, Mes rapports, Mon pé
 │  Rattaché à : [Projet Y ▾] [Appli X ▾] [+]                 │
 │  Visibilité : (•) Mon périmètre  ( ) Restreint  ( ) Ouvert │
 │  ⚠ Données personnelles possibles : [Voir et masquer]      │
-│  Odin n'accepte pas d'informations classifiées de défense. │
+│  Tous contenus acceptés ; la visibilité suit vos droits.   │
 │                      [Enregistrer en brouillon] [Partager] │
 └────────────────────────────────────────────────────────────┘
 ```
@@ -212,7 +212,7 @@ Deux ou trois colonnes de scénarios : hypothèses modifiées en tête (surlign�
 
 ### E-15. Roadmap
 
-Axe temporel par horizons (Maintenant / Prochainement / Plus tard) ; lignes = thèmes ou objectifs ; jalons ; liens de dépendance ; couches (échéances réglementaires, fins de support, calendrier ministériel) activables ; panneau de **conflits** (capacité, dépendance, échéance, fin de support) ; versions et comparaison.
+Axe temporel par horizons (Maintenant / Prochainement / Plus tard) ; lignes = thèmes ou objectifs ; jalons ; liens de dépendance ; couches (contraintes et échéances externes, fins de support, calendrier ministériel) activables ; panneau de **conflits** (capacité, dépendance, échéance, fin de support) ; versions et comparaison.
 
 ### E-16. Registre de dette
 
@@ -242,11 +242,11 @@ Calendrier des échéances (fin, préavis, reconduction) ; fiche contrat ; indic
 
 ### E-20. Sécurité et risques
 
-Posture (par domaine, application), registre des risques (matrice gravité × vraisemblance), homologations (échéances), constats et remédiations, exceptions, plans d'action. Contenu N4 masqué hors droits ; vue **direction** sans détail technique.
+Posture (par domaine, application), registre des risques (matrice gravité × vraisemblance), évaluations de sécurité (échéances), constats et remédiations, exceptions, plans d'action. Contenu N4 masqué hors droits ; vue **direction** sans détail technique.
 
-### E-21. Registre réglementaire
+### E-21. Contraintes et échéances
 
-Table : texte · statut juridique · source · **vérifié le** · applicabilité · obligations · état · échéance. Badge « À revérifier ». Calendrier consolidé. Fiche texte avec historique des changements de statut.
+Table : libellé · source (libre) · nature · échéance · applicabilité · état · responsable · objets rattachés. Calendrier consolidé. Ajout rapide depuis un rapport (« c'est une contrainte »). Import de la liste de l'organisme. **Aucun texte n'est préchargé.**
 
 ### E-22. Comité
 
@@ -281,16 +281,16 @@ Champ de question ; réponse avec **résumé**, **détails**, **Sources** (liste
 │ SÉCURITÉ       Posture 3,1/5  2 risques majeurs ouverts      │
 │ RESSOURCES     Tension : Architecte, Analyste sécurité       │
 │ FINANCES       Consommé 61 %  Run 68 % / Build 32 %          │
-│ CONFORMITÉ     3 échéances < 90 j  1 en écart                │
+│ CONTRAINTES    3 échéances < 90 j  1 en écart                │
 │ CONTRATS       2 préavis < 90 j                              │
 │ À DÉCIDER      4 décisions en attente  [Ouvrir]              │
 │ Chaque tuile : valeur · tendance · fiabilité · fraîcheur · « Pourquoi ? » │
 └──────────────────────────────────────────────────────────────┘
 ```
 
-### E-26. Espace audit
+### E-26. Traçabilité
 
-Recommandations reçues (origine, objet, réponse, échéance, statut) ; dossier de preuve d'une décision ; journal (filtres) ; états consolidés exportables.
+Dossier de preuve d'une décision (options, critères, hypothèses, faits au jour J, versions) ; journal (filtres) ; états consolidés exportables (dont consolidation de la dépense numérique).
 
 ### E-27. Santé du référentiel
 
@@ -298,7 +298,7 @@ Indicateurs de couverture, fraîcheur, faits en attente, orphelins, doublons, co
 
 ### E-28. Administration
 
-Rubriques : Organisation · Rôles et périmètres · Référentiels (profils, types de rapports, natures de faits) · Gabarits · Seuils et règles de santé · Grille de priorisation · Politique de classification · Seuil d'agrégation · Conservation · Registre réglementaire · Instances · Sources d'alimentation · Vocabulaire · Journal des modifications. Chaque modification propose un **aperçu d'impact**.
+Rubriques : Organisation · Rôles et périmètres · Référentiels (profils, types de rapports, natures de faits) · Gabarits · Seuils et règles de santé · Grille de priorisation · Politique de classification · Seuil d'agrégation · Conservation · Modèles de contraintes · Instances · Sources d'alimentation · Vocabulaire · Journal des modifications. Chaque modification propose un **aperçu d'impact**.
 
 ## 5. États et messages
 
@@ -322,7 +322,7 @@ Rubriques : Organisation · Rôles et périmètres · Référentiels (profils, t
 | Faits à valider | Responsable de l'objet | Application | Résumé, lien |
 | Demande de précision | Auteur / responsable | Application + courriel | Question + choix |
 | Rapport périodique attendu | Responsable de projet | Courriel | Gabarit prérempli |
-| Échéance (contrat, obligation, homologation, fin de support) | Responsables concernés | Application + courriel | Échéance + décision à prendre |
+| Échéance (contrat, contrainte externe, évaluation de sécurité, fin de support) | Responsables concernés | Application + courriel | Échéance + décision à prendre |
 | Décision prise / bilan dû | Participants / décideur | Application | Lien décision |
 | Réponse à une demande | Demandeur | Application | Statut + motif |
 | Signal critique | Référent du domaine, direction | Application | Message neutre, sans contenu N4 |
@@ -341,8 +341,8 @@ Règles : regroupement (synthèse quotidienne possible), pas de contenu N3/N4 da
 
 ## 8. Accessibilité, langue, supports
 
-- **Accessibilité** : conformité au référentiel d'accessibilité applicable aux services publics numériques de l'État (niveau à confirmer, visé : AA), pour l'application et les documents produits. Navigation clavier complète, contrastes suffisants, jamais d'information portée par la seule couleur, textes alternatifs, lecteurs d'écran, taille de texte ajustable.
-- **Charte** : cohérence visuelle avec la charte graphique de l'État ou de l'organisme (à confirmer ; question ouverte Q-12).
+- **Accessibilité** : niveau **choisi par l'organisme** (visée recommandée : AA), pour l'application et les documents produits. Navigation clavier complète, contrastes suffisants, jamais d'information portée par la seule couleur, textes alternatifs, lecteurs d'écran, taille de texte ajustable.
+- **Charte** : charte graphique **configurable par l'organisme** (logo, couleurs, modèles de documents).
 - **Langue** : français ; vocabulaire paramétrable ; bulles d'aide ; glossaire.
 - **Supports** : usage sur poste de travail en priorité ; consultation (lecture, validation simple, réponse à une précision, dépôt de rapport) sur tablette et téléphone ; l'édition lourde (roadmap, scénarios) est réservée au poste de travail.
 - **Mode sobre** : pas de mise en page lourde ; tableau de bord « faible complexité » pour les utilisateurs occasionnels.

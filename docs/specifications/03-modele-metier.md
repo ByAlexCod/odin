@@ -23,10 +23,11 @@
 | **Rattachement** | Lien entre un fait ou un rapport et un objet du patrimoine (application, initiative, équipe…). |
 | **Signal** | Alerte détectée automatiquement (écart, contradiction, dérive, échéance) à examiner. |
 | **Décision** | Choix formalisé par une instance ou un responsable, avec options, critères, hypothèses et suites. |
+| **Contrainte externe** | Obligation, engagement ou échéance imposée de l'extérieur, **saisie par l'organisme** (Odin ne livre aucun registre de textes). |
 | **Scénario** | Hypothèse alternative (budget, ressources, calendrier) comparée à une base de référence, sans modifier la référence. |
 | **Service fait / réalisé** | Avancement constaté, par opposition à l'avancement déclaré. |
 | **ETP** | Équivalent temps plein (capacité ou consommation de travail). |
-| **ETPT** | Équivalent temps plein travaillé (moyenne annualisée, utilisé pour le plafond d'emplois de l'État). |
+| **ETPT** | Équivalent temps plein travaillé (moyenne annualisée, utilisable pour suivre un plafond d'effectifs si l'organisme en a un). |
 | **Run / Build** | Dépenses de fonctionnement et maintien (run) vs évolutions et projets (build / change). |
 | **Fraîcheur** | Ancienneté de l'information la plus récente qui alimente un chiffre. |
 | **Fiabilité** | Niveau de confiance d'un fait : déclaré, confirmé, validé, vérifié (voir §4). |
@@ -42,11 +43,11 @@ Chaque objet porte au minimum : identifiant, nom, description, responsable, stat
 | OBJ-01 | **Organisme** | Nom, tutelle, type (ministère, direction, opérateur), exercice courant | Un seul par déploiement |
 | OBJ-02 | **Direction / service** | Nom, rattachement hiérarchique, responsable | Hiérarchie d'unités |
 | OBJ-03 | **Équipe** | Nom, mission, rattachement, applications portées, effectif **agrégé** par profil | Aucun lien vers des personnes affiché dans les vues de pilotage |
-| OBJ-04 | **Profil** | Famille, intitulé (référentiel), niveau, statut (titulaire, contractuel, prestataire) | Référentiel interne, aligné sur un référentiel de l'État (D2) |
+| OBJ-04 | **Profil** | Famille, intitulé (référentiel), niveau, statut (titulaire, contractuel, prestataire) | Référentiel interne, alignable sur le référentiel choisi par l'organisme (D2) |
 | OBJ-05 | **Compétence** | Libellé, domaine, technologie liée, niveau | Rareté, criticité |
 | OBJ-06 | **Capacité** | Équipe × profil × période : ETP disponibles (internes, prestataires) | Calculée à partir d'hypothèses (congés, productivité) |
 | OBJ-07 | **Poste vacant / besoin de recrutement** | Profil, équipe, durée de vacance, tension | Non nominatif |
-| OBJ-08 | **Plafond d'emplois / schéma d'emplois** | ETPT, ETP, exercice | Contrainte, saisie par la fonction RH ou financière |
+| OBJ-08 | **Plafond d'effectifs (optionnel)** | ETPT, ETP, exercice | Contrainte, saisie par la fonction RH ou financière |
 
 ### 2.2 Patrimoine du SI
 
@@ -69,7 +70,7 @@ Chaque objet porte au minimum : identifiant, nom, description, responsable, stat
 | OBJ-22 | **Demande** | Émetteur (service), besoin, urgence, valeur attendue, statut |
 | OBJ-23 | **Initiative** | Nom, nature (projet, programme, chantier), objectifs servis, responsable, équipe(s), budget, ETP, dates, jalons, dépendances, bénéfices attendus, statut, santé |
 | OBJ-24 | **Jalon** | Libellé, date prévue/réelle, initiative |
-| OBJ-25 | **Dépendance** | Entre initiatives, applications, fournisseurs, échéances réglementaires, décisions |
+| OBJ-25 | **Dépendance** | Entre initiatives, applications, fournisseurs, contraintes et échéances externes, décisions |
 | OBJ-26 | **Feuille de route** | Nom, périmètre, horizon, version, statut (brouillon, validée, archivée) |
 | OBJ-27 | **Scénario** | Base de référence, hypothèses modifiées, résultats comparés, auteur, statut |
 | OBJ-28 | **Bénéfice** | Type (financier, service, risque évité), valeur attendue, valeur constatée, date de mesure |
@@ -79,25 +80,23 @@ Chaque objet porte au minimum : identifiant, nom, description, responsable, stat
 
 | ID | Objet | Attributs principaux |
 |---|---|---|
-| OBJ-30 | **Ligne budgétaire** | Exercice, programme/action (cadre de l'État), titre de dépense, AE/CP, montant voté, montant disponible |
+| OBJ-30 | **Ligne budgétaire** | Exercice, **nomenclature de l'organisme** (niveaux paramétrables, par exemple programme / action / titre), engagements et paiements si applicable, montant voté, montant disponible |
 | OBJ-31 | **Dépense** | Montant, nature (run, build), date, imputation (application, initiative, service), origine |
 | OBJ-32 | **Fournisseur** | Nom, nature (éditeur, ESN, hébergeur), dépendance (part de la dépense, criticité) |
 | OBJ-33 | **Marché / contrat** | Objet, fournisseur, dates de début/fin, échéance de préavis, reconductions, montant, applications couvertes |
 | OBJ-34 | **Licence / abonnement** | Produit, quantité, coût, renouvellement |
 
-### 2.5 Sécurité, risques, conformité
+### 2.5 Sécurité, risques, contraintes externes
 
 | ID | Objet | Attributs principaux |
 |---|---|---|
 | OBJ-40 | **Risque** | Intitulé, objet concerné, gravité, vraisemblance, risque résiduel, propriétaire, traitement, acceptation (qui, quand) |
 | OBJ-41 | **Mesure de sécurité / plan d'action** | Libellé, risque ou écart traité, échéance, responsable, statut |
-| OBJ-42 | **Homologation / évaluation de sécurité** | Application, date, validité, décision, réserves |
+| OBJ-42 | **Évaluation / autorisation de sécurité** | Application, date, validité, décision, réserves |
 | OBJ-43 | **Constat d'audit ou de test** | Source, date, gravité, application, statut de remédiation |
 | OBJ-44 | **Dérogation / exception** | Règle dérogée, justification, durée, validation |
 | OBJ-45 | **Plan de continuité (information)** | Application, objectifs de reprise, date du dernier test |
-| OBJ-46 | **Texte / exigence réglementaire** | Référence, nature, statut juridique (en vigueur, adopté non promulgué, projet), source, date de vérification, périmètre d'application |
-| OBJ-47 | **Obligation** | Texte, exigence concrète, échéance, applicabilité à l'organisme, responsable, état de conformité |
-| OBJ-48 | **Doctrine / règle de l'État** | Référence, exigence, échéance | (ex. doctrine d'hébergement, feuilles de route ministérielles) |
+| OBJ-46 | **Contrainte / échéance externe** | Libellé, source (texte libre), nature (obligation, engagement, échéance), échéance, applicabilité, responsable, état, date de dernière mise à jour | Saisie par l'organisme ; aucun registre livré |
 
 ### 2.6 Contribution, IA et décision
 
@@ -110,7 +109,6 @@ Chaque objet porte au minimum : identifiant, nom, description, responsable, stat
 | OBJ-54 | **Instance / comité** | Nom, composition (rôles), périodicité, ordre du jour type |
 | OBJ-55 | **Décision** | Date, instance, objet, options, critères, hypothèses, décideur, motifs, bénéfices attendus, échéance de revue, statut, bilan |
 | OBJ-56 | **Note de décision** | Décision demandée, contexte, options, impacts, recommandation, sources |
-| OBJ-57 | **Recommandation de contrôle** | Origine (corps de contrôle, audit), date, objet, réponse, plan d'action, échéance, statut |
 | OBJ-58 | **Restitution** | Type (rapport de direction, présentation, synthèse, export), audience, période, gabarit, version, sources, statut |
 | OBJ-59 | **Gabarit** | Type de rapport ou de restitution, champs, charte, audience |
 
@@ -127,7 +125,7 @@ Organisme ─ a ─ Directions ─ ont ─ Équipes ─ portent ─ Applications
 Objectifs ─ (cascade) ─ Initiatives ─ ont ─ Jalons, Bénéfices, Dépendances, Budget, ETP
 Initiatives ─ composent ─ Feuilles de route ─ déclinées en ─ Scénarios
 Demandes ─ (qualification) ─▶ Initiatives
-Textes réglementaires ─ génèrent ─ Obligations ─ rattachées à ─ Applications / Initiatives / Équipes
+Contraintes externes ─ rattachées à ─ Applications / Initiatives / Équipes
 Rapports ─ contiennent ─ Faits ─ rattachés à ─ n'importe quel objet ci-dessus ─ alimentent ─ Indicateurs
 Faits ─ (écarts / contradictions) ─▶ Signaux ─▶ Demandes de précision
 Décisions ─ portent sur ─ Initiatives / Applications / Risques / Contrats ─ citent ─ Faits et Rapports
@@ -137,7 +135,7 @@ Restitutions ─ composées de ─ Indicateurs, Faits, Décisions (avec sources)
 Règles de relation clés :
 - Une **application** a au moins une équipe responsable et un responsable d'application nommé (sinon elle est signalée « orpheline »).
 - Une **initiative** sert au moins un objectif ou un service rendu, ou est marquée « hors stratégie » (transparence).
-- Une **obligation** porte toujours sa source juridique et son **statut juridique** au jour de la dernière vérification.
+- Une **contrainte externe** porte toujours sa source (texte libre), son responsable et sa date de dernière mise à jour.
 - Un **fait** est toujours relié à un rapport source (ou à une saisie manuelle identifiée) ; un fait sans source n'existe pas.
 
 ## 4. Niveaux de fiabilité d'un fait
@@ -192,9 +190,9 @@ Brouillon ─▶ Déposé ─▶ Analysé ─▶ En revue (auteur) ─▶ Publi�
 
 `Identifié → Évalué → Priorisé → Planifié (dans une initiative) → En cours → Remboursé` (ou `Accepté` avec justification et date de revue).
 
-### 5.8 Obligation réglementaire
+### 5.8 Contrainte externe
 
-`Identifiée → Applicabilité évaluée → Plan de conformité → En conformité / En écart / Non applicable (motivé)` ; avec alerte d'échéance.
+`Saisie → Rattachée → Suivie (à venir / en écart / satisfaite) → Levée ou Non applicable (motivé)` ; alerte d'échéance ; badge « à revoir » si non mise à jour.
 
 ### 5.9 Signal
 
@@ -203,7 +201,7 @@ Brouillon ─▶ Déposé ─▶ Analysé ─▶ En revue (auteur) ─▶ Publi�
 ## 6. Unités et conventions de mesure
 
 - **Argent** : euros ; exercice budgétaire ; distinction AE/CP lorsque applicable ; hors taxes ou toutes taxes comprises précisé à chaque saisie.
-- **Capacité** : ETP par profil et par équipe ; conversion en **ETPT** pour le suivi du plafond d'emplois, avec règle de conversion visible (RG-16).
+- **Capacité** : ETP par profil et par équipe ; conversion en **ETPT** pour le suivi d'un plafond d'effectifs si l'organisme en a un, avec règle de conversion visible (RG-16).
 - **Temps** : horizons *maintenant / prochainement / plus tard* pour les roadmaps ; dates précises pour les jalons et échéances.
 - **Santé** (initiative, application) : trois états (conforme / sous vigilance / critique) **calculés par règles paramétrables** et justifiés (RG-08).
 - **Criticité** : échelle à 4 niveaux (continuité du service rendu), déduite des services rendus servis et confirmable par le responsable.

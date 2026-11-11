@@ -34,7 +34,7 @@ L'IA **n'est jamais décisionnaire** : elle ne valide aucun fait pour un indicat
 | IA-15 | L'**usage de l'IA est journalisé** (analyses réalisées, périmètres, versions de l'outil d'IA utilisées, corrections) et consultable par le DPO et l'auditeur (RG-22). |
 | IA-16 | **Mode dégradé** : si l'IA est indisponible ou refusée, déposer, saisir, valider, décider, restituer restent possibles manuellement. |
 | IA-17 | Les **données personnelles** détectées sont signalées ; l'utilisateur peut les masquer avant publication ; l'IA ne les réutilise pas pour d'autres finalités. |
-| IA-18 | L'IA ne **transmet pas** à l'extérieur de l'organisme des contenus de l'organisme sans règle explicite (contrainte à instruire en phase technique : souveraineté, hébergement). |
+| IA-18 | **Contenus et traitements d'IA restent dans l'infrastructure de l'organisme** (instance auto-hébergée, D6) ; aucune donnée n'en sort sans règle explicite configurée par l'organisme. |
 | IA-19 | **Transparence** : chaque utilisateur peut consulter une page expliquant ce que fait l'IA, avec quelles limites, comment contester, et à qui s'adresser (DPO). |
 | IA-20 | **Évaluation de la qualité** régulière (jeux de rapports de référence, taux d'erreurs par nature de fait) avant toute évolution de l'IA ; une dégradation constatée déclenche un retour à la version précédente de configuration. |
 | IA-21 | Un **fait comportant des données contradictoires** n'est jamais « arbitré » par l'IA ; il est signalé et envoyé à un humain. |
@@ -54,8 +54,8 @@ Chaque nature indique : ce que l'IA cherche, les champs, l'objet de rattachement
 | **Ressources** | Besoin, manque, surcharge, vacance, dépendance à un rôle ou prestataire | Profil, équipe, ETP, période (jamais de nom) | Équipe / initiative | Responsable d'équipe ; RH |
 | **Budget / dépense** | Montant consommé, prévu, dépassement, demande de crédits | Montant, nature, exercice, imputation | Initiative / application | Contrôle de gestion |
 | **Dette** | Dette technique ou autre, obsolescence | Type, description, intérêt, effort, échéance | Application / technologie | Responsable d'application |
-| **Sécurité** | Vulnérabilité, constat d'audit, écart, homologation, exception | Gravité, objet, échéance, statut | Application | RSSI |
-| **Conformité** | Obligation citée, écart, échéance | Texte, exigence, état | Obligation / application | Référent conformité / DPO |
+| **Sécurité** | Vulnérabilité, constat d'audit, écart, évaluation de sécurité, exception | Gravité, objet, échéance, statut | Application | RSSI |
+| **Contrainte externe** | Obligation, engagement ou échéance citée, écart | Libellé, échéance, état | Contrainte externe / application | Responsable de la contrainte |
 | **Continuité** | Test, objectif de reprise, résultat | Date, résultat, objectif | Application / service rendu | Responsable d'application / RSSI |
 | **Bénéfice** | Gain constaté ou attendu | Type, valeur, date | Initiative | Responsable de projet / contrôle de gestion |
 | **Fournisseur / contrat** | Échéance, dépendance, difficulté, renouvellement | Fournisseur, date, montant, objet | Contrat / fournisseur | Achats |
@@ -142,7 +142,7 @@ Avant tout export ou partage d'un document produit avec l'IA, Odin vérifie et a
 | Rapport sans informations exploitables | Résumé seulement ; aucun fait ; indication « pas de fait détecté » |
 | Rapport contenant des faits graves sur des personnes ou une infraction | Message dirigeant vers la procédure d'alerte protégée ; pas d'analyse (RG-24) |
 | Documents contradictoires de niveaux de classification différents | Fait au niveau le plus élevé ; avertissement |
-| Contenu possiblement classifié de défense | Rejet avec message ; avertissement tracé |
+| Contenu portant un marquage de classification de l'organisme | Niveau correspondant proposé (à confirmer) ; habilitations de lecture respectées |
 | Auteur qui conteste un fait extrait | Rejet et retour qualité ; jamais d'insistance |
 | Demande de résumé d'un contenu hors droits | Refus neutre (RG-04) |
 | Demande d'évaluation de personnes | Refus expliqué (RG-01) |
@@ -156,5 +156,4 @@ Avant tout export ou partage d'un document produit avec l'IA, Odin vérifie et a
 - Elle ne prend aucune décision ni n'engage l'organisme.
 - Elle n'invente aucune donnée chiffrée ni source.
 - Elle ne contourne pas les droits d'accès.
-- Elle ne traite pas d'informations classifiées de défense.
 - Elle ne remplace pas la procédure d'alerte protégée.

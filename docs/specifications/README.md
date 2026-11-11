@@ -5,7 +5,9 @@ Périmètre : **métier et expérience utilisateur uniquement**. Aucun choix tec
 
 ## Objet du produit en une phrase
 
-Odin est la plateforme où **tous les acteurs d'un organisme de l'État** (agents, développeurs, chefs de projet, architectes, sécurité, finances, RH, direction) **déposent leurs rapports et leurs informations**, où une **intelligence artificielle les comprend et les relie** au patrimoine du système d'information, et d'où la direction **décide** (dette, roadmaps, objectifs, sécurité, ressources, finances, conformité) et **produit ses rapports et présentations**.
+Odin est la plateforme où **tous les acteurs d'un organisme public** (agents, développeurs, chefs de projet, architectes, sécurité, finances, RH, direction) **déposent leurs rapports et leurs informations**, où une **intelligence artificielle les comprend et les relie** au patrimoine du système d'information, et d'où la direction **décide** (dette, roadmaps, objectifs, sécurité, ressources, finances, conformité) et **produit ses rapports et présentations**.
+
+**Positionnement** : Odin est une **plateforme d'aide à la décision**, **configurable par chaque organisme** et **auto-hébergée**. Ce n'est pas un outil d'accompagnement des procédures publiques officielles.
 
 ## Décisions actées (point de départ de tout le dossier)
 
@@ -15,7 +17,11 @@ Odin est la plateforme où **tous les acteurs d'un organisme de l'État** (agent
 | D1 | Odin évalue des **applications et des équipes**, **jamais des personnes**. | Échanges du 11/11/2026 |
 | D2 | « Métiers » = **profils RH** (familles et profils de métiers du numérique, compétences). Le sens « capacité métier / mission » devient « **Service rendu** » dans ce dossier. | Échanges du 11/11/2026 |
 | D3 | **Un client = un seul organisme** (pas de multi-organismes ni de refacturation entre entités). | Échanges du 11/11/2026 |
-| D4 | Cible : **organismes de l'État** (ministères, directions, et, par hypothèse à confirmer, opérateurs sous tutelle) ; hors collectivités et hôpitaux. Sécurité sociale hors périmètre tant que non confirmée. | Échanges du 11/11/2026 |
+| D4 | Cible : **organismes publics, en priorité de l'État**. **Chaque organisme configure son instance selon ses propres règles** (nomenclature budgétaire, rôles, seuils, classification, vocabulaire). Aucun périmètre (ministère, opérateur, sécurité sociale…) n'est codé en dur. | Échanges du 11/11/2026 |
+| D5 | **Aide à la décision, pas accompagnement des procédures publiques** : Odin n'embarque ni textes officiels, ni seuils, ni circuits d'avis, ni registre réglementaire. L'organisme peut saisir ses propres **contraintes et échéances externes**. | Échanges du 11/11/2026 |
+| D6 | **Auto-hébergé** : chaque organisme héberge sa propre instance ; contenus et traitements d'IA restent dans son infrastructure. | Échanges du 11/11/2026 |
+| D7 | **Tous les contenus sont acceptés**, y compris sensibles, de diffusion restreinte ou classifiés ; les **niveaux de classification sont configurables** ; la protection repose sur le cloisonnement et les habilitations, dont la responsabilité revient à l'organisme. | Échanges du 11/11/2026 |
+| D8 | **Choix de conception par défaut (à valider)** : les faits sont validés par le **responsable de l'objet** (curateur de domaine optionnel) ; les **autorités** (acceptation de risque, validation de restitutions officielles) sont paramétrables, par défaut le **décideur du périmètre**. | Décision de conception (délégation de l'utilisateur) |
 
 ## Plan du dossier
 
@@ -29,7 +35,7 @@ Odin est la plateforme où **tous les acteurs d'un organisme de l'État** (agent
 | [06-intelligence-artificielle.md](06-intelligence-artificielle.md) | Ce que l'IA comprend et produit, garde-fous, validation humaine, qualité |
 | [07-ux-navigation-et-ecrans.md](07-ux-navigation-et-ecrans.md) | Architecture de l'information, écrans clés (maquettes textuelles), états, notifications, accessibilité |
 | [08-regles-de-gestion-et-transverses.md](08-regles-de-gestion-et-transverses.md) | Règles de gestion, confidentialité, droit des agents, audit, exigences transverses |
-| [09-annexes-gabarits-et-indicateurs.md](09-annexes-gabarits-et-indicateurs.md) | Gabarits de rapports, catalogue d'indicateurs, calendrier réglementaire |
+| [09-annexes-gabarits-et-indicateurs.md](09-annexes-gabarits-et-indicateurs.md) | Gabarits de rapports, catalogue d'indicateurs, exemples de contraintes |
 | [10-lots-priorites-et-questions-ouvertes.md](10-lots-priorites-et-questions-ouvertes.md) | Découpage en lots, priorités, critères de recette, questions ouvertes |
 
 ## Conventions
@@ -37,7 +43,7 @@ Odin est la plateforme où **tous les acteurs d'un organisme de l'État** (agent
 - **Identifiants** : `P-nn` parcours ; `EX-<module>-nn` exigence ; `RG-nn` règle de gestion ; `IA-nn` règle propre à l'IA ; `E-nn` écran ; `OBJ-nn` objet métier.
 - **Priorités** (méthode MoSCoW) : **M** = indispensable au lot concerné ; **S** = important ; **C** = souhaitable ; **W** = reporté (hors lot courant).
 - **Vocabulaire** : voir le glossaire (fichier 03). « Service rendu » remplace « métier/capacité métier » (D2).
-- **Marqueurs de fiabilité des règles externes** : toute règle qui dépend d'un texte réglementaire ou d'une doctrine est portée comme une **donnée paramétrable et datée** (registre réglementaire), jamais figée. Les valeurs citées en exemple (ex. seuil d'avis de la DINUM) sont **à vérifier** : le rapport de recherche relève des divergences de sources non tranchées.
+- **Règles externes** : Odin n'embarque aucun texte ni procédure officielle (D5) ; nomenclatures, seuils, échéances et contraintes sont des **paramètres de l'organisme**.
 - Le **rapport de recherche** (`reports/Axes métier de la stack Odin.md`) est la base de justification ; ses marqueurs [S], [S?], [I], [CG] indiquent la fiabilité de ses affirmations.
 
 ## Statut

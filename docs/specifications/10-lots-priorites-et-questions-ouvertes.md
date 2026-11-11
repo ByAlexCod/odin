@@ -9,15 +9,15 @@ Odin est découpé en **lots livrables** qui apportent chacun de la valeur **uti
 | Lot | Nom | Modules (exigences marquées L1 etc. au fichier 05) | Valeur livrée |
 |---|---|---|---|
 | **L1** | **Contribution et compréhension** | ACC, RAP, IAF, REF (applications, équipes, services rendus), NOT, ASS (sur rapports), QUA, ADM (base), AUD (journal), TDB (vue stratégique initiale, santé applicative, fraîcheur), RST (synthèses, résumé hebdomadaire) | Tous les agents déposent ; l'IA propose ; les responsables valident ; la direction voit une première vue fiable et peut interroger Odin |
-| **L2** | **Transformation** | OBJ, POR (demandes, portefeuille, santé), ROA (roadmaps, versions), DET (dette, obsolescence), DEC (instances, décisions, bilans), TDB (alertes, historique) | Objectifs, portefeuille, roadmaps et dette reliés aux rapports ; décisions tracées |
+| **L2** | **Transformation** | OBJ, POR (demandes, portefeuille, santé), ROA (roadmaps, versions), DET (dette, obsolescence), REG (contraintes et échéances), DEC (instances, décisions, bilans), TDB (alertes, historique) | Objectifs, portefeuille, roadmaps, dette et contraintes externes reliés aux rapports ; décisions tracées |
 | **L3** | **Ressources et finances** | RSR, FIN, FOU, ROA (cohérence, scénarios), POR (contraintes), IAF (rapprochement objectif) | Capacité par profil (ETP/ETPT), budget, coûts, contrats ; scénarios sous contraintes |
-| **L4** | **Sécurité et conformité** | SEC, REG, DET (lien sécurité), FOU (souveraineté), ADM (registre) | Risques, homologations, obligations et échéances intégrés aux arbitrages |
+| **L4** | **Sécurité et risques** | SEC, DET (lien sécurité), FOU (hébergement), ADM | Risques, évaluations de sécurité, plans d'action intégrés aux arbitrages |
 | **L5** | **Décision avancée et restitution** | DEC (notes, comptes rendus), RST (rapports de direction, présentations, exports), ROA (sensibilité, vues de diffusion), FIN (dossier d'arbitrage), POR (capitalisation) | Production assistée de supports de décision et de présentations |
-| **L6** | **Audit, comparaison, ouverture** | DEC (recommandations de contrôle), AUD (exports), TDB (benchmark), DET (outils de mesure), FIN (évaluation socio-économique), SEC (quantification), REG (accessibilité/RSE), RSR (formation) | Contrôle externe, comparaison, rapprochements avancés |
+| **L6** | **Comparaison et ouverture** | AUD (exports), TDB (benchmark), DET (outils de mesure), SEC (quantification), RSR (formation) | Comparaisons, rapprochements avancés, exports d'audit |
 
 ### 2.1 Cheminement conseillé
 
-L1 est **un prérequis** de tous les autres. L2 et L3 peuvent être menés **en parallèle partiel** (L3 dépend de la qualité des faits de ressources et de finances). L4 peut démarrer dès L1 pour le volet « conformité » (registre) si le besoin d'échéances est urgent. L5 s'appuie sur la maturité des faits des lots 2 à 4.
+L1 est **un prérequis** de tous les autres. L2 et L3 peuvent être menés **en parallèle partiel** (L3 dépend de la qualité des faits de ressources et de finances). L4 s'appuie sur les faits de sécurité du lot 1. L5 s'appuie sur la maturité des faits des lots 2 à 4.
 
 ### 2.2 Contenu minimal du lot 1 (pour être utile)
 
@@ -63,8 +63,8 @@ Parcours P-01 à P-08, P-22, P-23 (vue réduite), P-25, P-26 (base), P-27 ; écr
 | Lot | Critère principal |
 |---|---|
 | L2 | Une décision d'arbitrage est enregistrée, ses suites sont créées, son bilan est rappelé et comparable (P-12, P-20). La santé déclarée vs calculée détecte les « verts de façade ». |
-| L3 | Un scénario de réduction de capacité d'un profil affiche les initiatives retardées et le coût du report ; le plafond d'emplois (ETPT) est suivi avec règle de conversion explicite ; la dépense numérique est consolidée de façon reproductible. |
-| L4 | Un texte dont le statut change met à jour obligations, alertes et roadmap proposée ; une homologation proche de l'échéance alerte les bons rôles. |
+| L3 | Un scénario de réduction de capacité d'un profil affiche les initiatives retardées et le coût du report ; le plafond d'effectifs éventuel est suivi avec règle de conversion explicite ; la dépense numérique est consolidée de façon reproductible. |
+| L4 | Une évaluation de sécurité proche de l'échéance alerte les bons rôles ; un risque est relié à la dette et à l'initiative qui le traite. |
 | L5 | Une présentation générée est entièrement traçable (chaque chiffre) et son export vers une audience non habilitée est bloqué. |
 | L6 | Un dossier d'audit (preuves, recommandations, journal) est produit sans intervention technique. |
 
@@ -74,12 +74,12 @@ Parcours P-01 à P-08, P-22, P-23 (vue réduite), P-25, P-26 (base), P-27 ; écr
 |---|---|---|
 | Faible adoption par les contributeurs | Indicateurs vides | Valeur immédiate pour le contributeur (P-07), confirmation en lot, rappels sobres, conduite du changement |
 | Faits mal extraits ou fiabilité surévaluée | Décisions erronées | Niveaux de fiabilité, validation humaine, contradictions, mesure de qualité IA |
-| Perception de surveillance des agents | Rejet social, risque juridique | RG-01, RG-02, transparence, consultation des instances, AIPD |
+| Perception de surveillance des agents | Rejet social, risque juridique | RG-01, RG-02, transparence, information des instances, analyse d'impact recommandée |
 | Fuite de contenus sensibles via l'IA | Incident grave | RG-04, IA-10/11/18, journalisation, cloisonnement |
-| Données réglementaires fausses ou périmées | Mauvaise conformité | RG-28, date de vérification, « à revérifier » |
+| Contenus sensibles ou classifiés déposés par tous | Exposition interne | Niveaux configurables, cloisonnement, suggestion de niveau, habilitation par l'organisme (RG-32) |
 | Surcharge de validation (goulot) | Retard des indicateurs | Curateurs, validation en lot, seuils de confiance |
 | Périmètre trop large en lot 1 | Retard de livraison | Contenu minimal du lot 1 (§2.2) |
-| Dépendance à un fournisseur d'IA unique | Perte de souveraineté | Contrainte à traiter en phase technique (ET-01, IA-18), réversibilité (ET-20) |
+| Capacité des moyens d'IA auto-hébergés insuffisante pour la qualité attendue | Faits mal extraits, adoption freinée | Mode dégradé manuel (IA-16), mesure de qualité (IA-20), choix des moyens en phase technique |
 
 ## 6. Questions ouvertes
 
@@ -87,18 +87,18 @@ Chaque question indique **ce qu'elle bloque** et une **proposition par défaut**
 
 | # | Question | Bloque | Proposition par défaut |
 |---|---|---|---|
-| **Q-01** | Les **opérateurs de l'État** (établissements publics, agences) sont-ils dans le périmètre ? Et les **organismes de sécurité sociale** ? | Cadre budgétaire (programmes vs budgets propres), référentiels RH, avis | Opérateurs inclus ; sécurité sociale exclue |
-| **Q-02** | **Qui valide** les faits en second niveau : curateur dédié par domaine, ou responsable de l'objet seulement ? | Charge de validation, délais | Responsable de l'objet + curateur de domaine pour les ambiguïtés |
-| **Q-03** | **Jusqu'où** accepter les contenus sensibles (sécurité, RH, juridique) dans Odin ? | Classification, cloisonnement | Sécurité acceptée en N4 ; RH nominatif exclu ; juridique en N3 |
-| **Q-04** | Odin peut-il recevoir des **informations classifiées de défense** ou de **diffusion restreinte** ? | Hébergement, conception | Exclues (RG-32) ; diffusion restreinte à confirmer selon l'organisme |
-| **Q-05** | Quel **niveau d'hébergement et de souveraineté** est exigé pour les contenus et l'IA (exploitation interne, hébergement qualifié, autre) ? | Phase technique, faisabilité de l'IA | À instruire avec le RSSI ; niveau le plus protecteur par défaut |
-| **Q-06** | **Qui est l'autorité** d'acceptation des risques, de validation des restitutions officielles, des décisions d'avis ? | Workflows de validation | Rôles paramétrables ; défaut : DNUM pour risques et décisions |
-| **Q-07** | **Quelle valeur** pour le seuil d'avis de l'instance interministérielle et les autres seuils (9/15 M€, 20 M€) ? | Avis obligatoires | Paramètre ; valeur à vérifier sur le texte consolidé |
-| **Q-08** | **Calendrier et état de la transposition de la directive cyber (NIS 2)** et du **règlement sur l'IA** pour une organisation de l'État | Registre réglementaire, priorités L4 | Portés comme données datées ; revérification avant mise en service |
+| **Q-01** | ~~Opérateurs de l'État, sécurité sociale dans le périmètre ?~~ | — | **Tranchée (D4)** : chaque organisme configure son instance ; aucun périmètre codé en dur |
+| **Q-02** | ~~Qui valide les faits en second niveau ?~~ | — | **Tranchée par défaut de conception (D8, à valider)** : responsable de l'objet ; curateur de domaine optionnel |
+| **Q-03** | ~~Jusqu'où accepter les contenus sensibles ?~~ | — | **Tranchée (D7)** : tous les contenus |
+| **Q-04** | ~~Informations classifiées ou diffusion restreinte ?~~ | — | **Tranchée (D7)** : admises, via des niveaux de classification configurables |
+| **Q-05** | ~~Niveau d'hébergement et de souveraineté ?~~ | — | **Tranchée (D6)** : auto-hébergé par l'organisme |
+| **Q-06** | ~~Qui est l'autorité de validation ?~~ | — | **Tranchée par défaut de conception (D8, à valider)** : autorités paramétrables, par défaut le décideur du périmètre |
+| **Q-07** | ~~Valeur des seuils d'avis officiels~~ | — | **Écartée (D5)** : aucun seuil ni procédure officielle embarqués |
+| **Q-08** | ~~État de la transposition de NIS 2 et du règlement sur l'IA~~ | — | **Écartée (D5)** : aucun registre réglementaire embarqué |
 | **Q-09** | **Référentiel de profils** : référentiel de l'État, nomenclature de la profession, ou hybride ? | Capacité, compétences | Référentiel de l'État complété si besoin |
 | **Q-10** | **Quelles sources de données** existent et sont accessibles (finances, RH agrégé, suivi de projets, outils de gestion de services, cartographie, risques) ? | Alimentations, fiabilité F3 | Import de fichiers au lot 1 ; alimentations ensuite |
-| **Q-11** | Le **dialogue social** : calendrier de consultation, AIPD, qui porte la communication aux agents ? | Date de mise en service | À lancer dès le lot 1 |
-| **Q-12** | **Charte graphique** : charte de l'État, de l'organisme, ou libre ? | UX | Charte de l'organisme |
+| **Q-11** | **Information des agents** et du dialogue social : qui porte la communication ? (recommandation, non bloquant) | Acceptation | À lancer dès le lot 1 |
+| **Q-12** | **Charte graphique** : configurable par l'organisme ; quelle charte par défaut ? | UX | Charte neutre configurable |
 | **Q-13** | **Mode de diffusion** (logiciel libre, inscription à un socle interministériel, usage interne) | Gouvernance produit | À décider avec le commanditaire |
 | **Q-14** | **Niveau de précision attendu** en ressources : par rôle/profil (proposé) ou nominatif ? (déjà tranché sur le principe : pas de nominatif) | RSR | Rôle/profil/équipe agrégé |
 | **Q-15** | **Part des dépenses numériques** à consolider : seulement la direction du numérique, ou tout l'organisme (réponse aux contrôles) ? | FIN | Tout l'organisme, avec périmètre paramétrable |
@@ -108,14 +108,13 @@ Chaque question indique **ce qu'elle bloque** et une **proposition par défaut**
 | **Q-19** | **Politique de conservation** : durées par type de contenu ? | RG-20 | À fournir par l'organisme/archives |
 | **Q-20** | **Qui pilote le produit** côté organisme (sponsor, product owner, administrateurs, curateurs) ? | Gouvernance, lot 1 | À désigner |
 | **Q-21** | **Dépôts par courriel ou transfert** : acceptés comme mode de dépôt ? | RAP | Oui, avec contrôle de l'expéditeur |
-| **Q-22** | **Évaluation socio-économique** et autres méthodes publiques : doivent-elles être outillées dès L3 ? | FIN | Reportée à L6 |
 
 ## 7. Prochaines étapes suggérées
 
-1. **Relecture** du dossier par le commanditaire ; arbitrage des questions Q-01 à Q-08 (celles qui bloquent le lot 1).
+1. **Relecture** du dossier par le commanditaire ; arbitrage des questions encore ouvertes (Q-09 à Q-21).
 2. **Entretiens** avec 6 à 10 personnes représentatives (contributeur, responsable d'application, chef de projet, RSSI, contrôle de gestion, RH, DNUM, direction) pour valider personas, parcours et gabarits.
 3. **Collecte de rapports réels** (anonymisés) pour constituer le jeu de référence de qualité de l'IA et valider le catalogue de faits.
-4. **Vérification des textes** du registre réglementaire (fichier 09 §4) sur sources officielles.
+4. **Choix des paramètres par défaut** (niveaux de classification, grille de priorisation, règles de santé, seuil d'agrégation) avec un organisme pilote.
 5. **Prototype de parcours** (maquettes cliquables) de P-02, P-05, P-22, P-23 et tests avec de vrais utilisateurs.
-6. **Consultation du DPO et du juridique** (AIPD, qualification IA, dialogue social).
+6. **Information du DPO** et des instances de dialogue social de l'organisme pilote (recommandé, non bloquant).
 7. **Spécification détaillée du lot 1** (cas de test, jeux de données) puis ouverture de la **phase technique** (architecture, hébergement, choix d'IA).
