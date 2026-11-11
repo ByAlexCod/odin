@@ -77,6 +77,7 @@ Dans un organisme public, les informations qui permettent de décider sur le sys
 - H3. Les rapports existent déjà sous forme de documents (texte, tableurs, présentations, comptes rendus) ; Odin ne demande pas de les réécrire.
 - H4. Chaque organisme **configure son instance** selon ses règles (D4) ; Odin n'est lié à aucun statut (ministère, opérateur…).
 - H6. Odin est **auto-hébergé** par l'organisme (D6) et accepte **tous les contenus** avec des niveaux de classification configurables (D7).
+- H7. Taille de référence : **environ 300 personnes** (D9). Les rôles sont souvent **cumulés** ; peu de curateurs (de l'ordre de 2 à 5) ; beaucoup d'équipes sous le seuil d'agrégation (RG-02).
 - H5. Les contributeurs externes (prestataires) peuvent être autorisés avec un périmètre restreint.
 
 ## 5. Mesures de succès du produit

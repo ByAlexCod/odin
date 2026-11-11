@@ -7,7 +7,7 @@
 | ID | Règle |
 |---|---|
 | **RG-01** | **Odin n'évalue pas les personnes** (D1). Aucune vue, aucun export, aucune réponse de l'assistant, aucun fait ne présente de jugement, score, classement, charge, productivité ou activité **par personne**. Les objets évalués sont les applications, projets, équipes (agrégés) et services. |
-| **RG-02** | **Seuil minimal d'agrégation** : une métrique d'équipe n'est affichée que si l'effectif concerné atteint le seuil (valeur par défaut proposée : 5, paramétrable par l'administrateur avec journal). En deçà, la métrique est remontée au niveau supérieur ou masquée. Les croisements successifs ne doivent pas permettre de déduire une valeur individuelle (par exemple par différence). |
+| **RG-02** | **Seuil minimal d'agrégation** : une métrique d'équipe n'est affichée que si l'effectif concerné atteint le seuil (valeur par défaut proposée : 5, paramétrable avec journal, **jamais en dessous de 3**). En deçà, la métrique est remontée au niveau supérieur ou masquée. Les croisements successifs ne doivent pas permettre de déduire une valeur individuelle (par exemple par différence). |
 | **RG-03** | **Niveau par défaut** d'un rapport : N2 (périmètre de rattachement). L'auteur peut restreindre ; il ne peut pas élargir au-delà de son habilitation. |
 | **RG-04** | **Héritage et droits de lecture** : tout fait, synthèse, réponse, restitution ou notification hérite du niveau le plus élevé de ses sources, et n'est lisible que par ceux qui peuvent lire **toutes** les sources utilisées (ou une version expurgée). L'assistant, les synthèses et les exports respectent cette règle. |
 | **RG-05** | **Faits et indicateurs de direction** : un indicateur de direction n'est calculé qu'avec des faits F2 ou F3 ; les faits F1 peuvent y figurer en mention « déclaratif » ; les faits F0 jamais. |
@@ -51,6 +51,7 @@
 | **RG-18** | **Run / build** : classification selon une règle paramétrable (maintenance et exploitation = run ; évolution et projets = build) ; les dépenses ambiguës sont arbitrées par le contrôle de gestion. |
 | **RG-19** | **Échéances de contrats** : alertes graduées paramétrables (par défaut 180/90/30 jours avant le préavis) ; un préavis dépassé crée un signal critique avec les options restantes. |
 | **RG-37** | Aucune **valorisation financière individuelle** de personnes : les coûts de ressources sont présentés au niveau agrégé (équipe, profil, service). |
+| **RG-38** | **Données de temps et d'activité** : les temps imputés et toute donnée d'activité sont **agrégés dès l'alimentation** (équipe × profil × initiative × période) ; Odin ne conserve, n'affiche ni n'exporte aucune donnée **nominative** de temps ; une alimentation qui n'a pas pu être agrégée est rejetée. Aucun usage de ces données pour juger, classer ou suivre des personnes (RG-01). |
 
 ### 1.5 Décisions, conservation, droits
 
@@ -108,7 +109,7 @@ Les valeurs chiffrées sont des **objectifs de départ** à confirmer ; leur ré
 ### 2.6 Alimentations et interfaces (besoins, sans choix technique)
 
 - **ET-23.** **Alimentation initiale** du référentiel (applications, organisation) par import de fichiers ou de sources de l'organisme.
-- **ET-24.** **Alimentations récurrentes** souhaitables (par ordre de valeur) : sources financières de l'organisme (dépenses imputées), sources RH agrégées (effectifs par profil, plafonds), outils de suivi de projets et de développement (jalons, volumes), outils de gestion de services (incidents), outils de gestion de risques et de cartographie, bases publiques (calendrier de fin de support des technologies, bases ouvertes de l'État comme le panorama des grands projets).
+- **ET-24.** **Alimentations identifiées (D10)** : outil de suivi de projets (Jira) pour avancement, jalons et volumes ; **imputation des temps** pour la charge réelle, **agrégée** (RG-38) ; **finances saisies manuellement** (EX-FIN-12) ; import de fichiers pour l'existant. D'autres alimentations restent possibles ultérieurement.
 - **ET-25.** Chaque alimentation déclare sa **fiabilité** (F3 si objective), sa **fréquence** et son **périmètre**.
 - **ET-26.** **Ouverture** : Odin expose aux autres outils de l'organisme les objets et indicateurs, selon les droits.
 

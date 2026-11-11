@@ -180,6 +180,24 @@ Chaque contrainte est saisie avec une **source libre**, un **responsable** et un
 
 Le référentiel est **configurable par l'organisme** (référentiel de l'État, nomenclature de la profession ou référentiel propre) ; le jeu par défaut reste à choisir (Q-09).
 
+### Jeu par défaut proposé (D12, modifiable)
+
+Jeu **simplifié** (9 familles, environ 35 profils) adapté à une organisation d'environ 300 personnes ; l'organisme peut renommer, fusionner ou ajouter, et associer chaque profil à une **correspondance optionnelle** avec un référentiel officiel (nomenclature interministérielle ou de la profession). Ce jeu est **notre proposition**, il n'est pas la reproduction d'un référentiel officiel.
+
+| Famille | Profils proposés |
+|---|---|
+| Pilotage et gouvernance du SI | Responsable du numérique ; responsable de portefeuille / PMO ; contrôleur de gestion SI ; responsable achats numériques |
+| Conduite de projets et de produits | Chef de projet ; responsable de produit (product owner) ; coach agile / scrum master ; maîtrise d'ouvrage |
+| Architecture et urbanisme | Architecte d'entreprise ; architecte solution ; architecte technique |
+| Conception et développement | Développeur ; développeur front ; ingénieur qualité / test ; designer d'interface (UX) |
+| Production, exploitation, infrastructures | Administrateur systèmes et réseaux ; ingénieur DevOps / fiabilité ; administrateur de bases de données ; responsable d'exploitation |
+| Cybersécurité | Responsable de la sécurité (RSSI) ; analyste sécurité ; architecte sécurité ; correspondant sécurité |
+| Données et IA | Ingénieur données ; analyste de données ; data scientist ; responsable des données ; ingénieur IA |
+| Support et services aux utilisateurs | Technicien de support ; responsable de service ; gestionnaire de parc |
+| Fonctions d'appui du numérique | Responsable des contrats et fournisseurs ; juriste numérique ; délégué à la protection des données (DPO) ; formateur |
+
+Niveaux : junior, confirmé, senior, expert. Statuts : titulaire, contractuel, prestataire.
+
 ## 6. Typologie de risques et de dette (listes de départ)
 
 **Types de dette** : code ; architecture ; infrastructure ; tests et qualité ; documentation ; sécurité ; données ; fonctionnelle (écart avec le besoin) ; organisationnelle (compétences, processus, dépendances).

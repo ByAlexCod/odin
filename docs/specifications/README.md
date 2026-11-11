@@ -22,6 +22,10 @@ Odin est la plateforme où **tous les acteurs d'un organisme public** (agents, d
 | D6 | **Auto-hébergé** : chaque organisme héberge sa propre instance ; contenus et traitements d'IA restent dans son infrastructure. | Échanges du 11/11/2026 |
 | D7 | **Tous les contenus sont acceptés**, y compris sensibles, de diffusion restreinte ou classifiés ; les **niveaux de classification sont configurables** ; la protection repose sur le cloisonnement et les habilitations, dont la responsabilité revient à l'organisme. | Échanges du 11/11/2026 |
 | D8 | **Choix de conception par défaut (à valider)** : les faits sont validés par le **responsable de l'objet** (curateur de domaine optionnel) ; les **autorités** (acceptation de risque, validation de restitutions officielles) sont paramétrables, par défaut le **décideur du périmètre**. | Décision de conception (délégation de l'utilisateur) |
+| D9 | **Taille de référence : environ 300 personnes** (utilisateurs potentiels ; à confirmer s'il s'agit de l'organisme entier ou de la seule direction du numérique). | Échanges du 11/11/2026 |
+| D10 | **Sources de données disponibles** : outil de suivi de projets (**Jira**), **imputation des temps**, et **finances saisies manuellement** (aucune source automatique). | Échanges du 11/11/2026 |
+| D11 | **Rôles de pilotage d'Odin** (sponsor, administration, curation) : **différents profils peuvent les tenir**, attribués par l'organisme ; le cumul de rôles est la norme. | Échanges du 11/11/2026 |
+| D12 | **Référentiel de profils** : jeu par défaut **simplifié, proposé par Odin et modifiable** (fichier 09 §5), avec correspondance optionnelle vers un référentiel officiel. | Échanges du 11/11/2026 |
 
 ## Plan du dossier
 

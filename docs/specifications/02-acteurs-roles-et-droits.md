@@ -106,3 +106,4 @@ Le rôle **R08 (DPO)** voit le registre d'usage de l'IA, les alertes de données
 - **A-06.** Les **délégations** (absence, intérim) sont possibles pour les rôles de validation (R03, R04, R13), tracées et limitées dans le temps.
 - **A-07.** À la **mobilité ou au départ** d'un agent, ses rôles sont suspendus et ses objets (applications, projets, validations en attente) doivent être réattribués (parcours P-26).
 - **A-08.** Le niveau N4 d'un rapport ne peut être abaissé que par un rôle habilité du domaine concerné (ex. R07 pour la sécurité).
+- **A-09.** **Rôles de pilotage** (sponsor, administrateurs fonctionnels, curateurs, responsables des gabarits) : ils ne sont pas portés par un profil unique ; **différents profils peuvent les tenir**, attribués par l'organisme (D11). Dans une organisation d'environ 300 personnes, une même personne cumule souvent plusieurs rôles : l'interface s'adapte à la **combinaison** de rôles.

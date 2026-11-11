@@ -9,8 +9,8 @@ Odin est découpé en **lots livrables** qui apportent chacun de la valeur **uti
 | Lot | Nom | Modules (exigences marquées L1 etc. au fichier 05) | Valeur livrée |
 |---|---|---|---|
 | **L1** | **Contribution et compréhension** | ACC, RAP, IAF, REF (applications, équipes, services rendus), NOT, ASS (sur rapports), QUA, ADM (base), AUD (journal), TDB (vue stratégique initiale, santé applicative, fraîcheur), RST (synthèses, résumé hebdomadaire) | Tous les agents déposent ; l'IA propose ; les responsables valident ; la direction voit une première vue fiable et peut interroger Odin |
-| **L2** | **Transformation** | OBJ, POR (demandes, portefeuille, santé), ROA (roadmaps, versions), DET (dette, obsolescence), REG (contraintes et échéances), DEC (instances, décisions, bilans), TDB (alertes, historique) | Objectifs, portefeuille, roadmaps, dette et contraintes externes reliés aux rapports ; décisions tracées |
-| **L3** | **Ressources et finances** | RSR, FIN, FOU, ROA (cohérence, scénarios), POR (contraintes), IAF (rapprochement objectif) | Capacité par profil (ETP/ETPT), budget, coûts, contrats ; scénarios sous contraintes |
+| **L2** | **Transformation** | OBJ, POR (demandes, portefeuille, santé), ROA (roadmaps, versions), DET (dette, obsolescence), REG (contraintes et échéances), DEC (instances, décisions, bilans), TDB (alertes, historique), ALI (suivi de projets) | Objectifs, portefeuille, roadmaps, dette et contraintes externes reliés aux rapports et au suivi de projets ; décisions tracées |
+| **L3** | **Ressources et finances** | RSR, FIN (saisie manuelle assistée, consolidation), FOU, ALI (temps imputés), ROA (cohérence, scénarios), POR (contraintes) | Capacité et charge réelle par profil (agrégées), budget, coûts, contrats ; scénarios sous contraintes |
 | **L4** | **Sécurité et risques** | SEC, DET (lien sécurité), FOU (hébergement), ADM | Risques, évaluations de sécurité, plans d'action intégrés aux arbitrages |
 | **L5** | **Décision avancée et restitution** | DEC (notes, comptes rendus), RST (rapports de direction, présentations, exports), ROA (sensibilité, vues de diffusion), FIN (dossier d'arbitrage), POR (capitalisation) | Production assistée de supports de décision et de présentations |
 | **L6** | **Comparaison et ouverture** | AUD (exports), TDB (benchmark), DET (outils de mesure), SEC (quantification), RSR (formation) | Comparaisons, rapprochements avancés, exports d'audit |
@@ -95,23 +95,23 @@ Chaque question indique **ce qu'elle bloque** et une **proposition par défaut**
 | **Q-06** | ~~Qui est l'autorité de validation ?~~ | — | **Tranchée par défaut de conception (D8, à valider)** : autorités paramétrables, par défaut le décideur du périmètre |
 | **Q-07** | ~~Valeur des seuils d'avis officiels~~ | — | **Écartée (D5)** : aucun seuil ni procédure officielle embarqués |
 | **Q-08** | ~~État de la transposition de NIS 2 et du règlement sur l'IA~~ | — | **Écartée (D5)** : aucun registre réglementaire embarqué |
-| **Q-09** | **Référentiel de profils** : référentiel de l'État, nomenclature de la profession, ou hybride ? | Capacité, compétences | Référentiel de l'État complété si besoin |
-| **Q-10** | **Quelles sources de données** existent et sont accessibles (finances, RH agrégé, suivi de projets, outils de gestion de services, cartographie, risques) ? | Alimentations, fiabilité F3 | Import de fichiers au lot 1 ; alimentations ensuite |
+| **Q-09** | ~~Référentiel de profils par défaut ?~~ | — | **Tranchée (D12)** : jeu simplifié proposé par Odin (fichier 09 §5), modifiable, avec correspondance optionnelle vers un référentiel officiel |
+| **Q-10** | ~~Sources de données accessibles ?~~ | — | **Tranchée (D10)** : outil de suivi de projets (Jira), imputation des temps, finances saisies manuellement ; import de fichiers |
 | **Q-11** | **Information des agents** et du dialogue social : qui porte la communication ? (recommandation, non bloquant) | Acceptation | À lancer dès le lot 1 |
 | **Q-12** | **Charte graphique** : configurable par l'organisme ; quelle charte par défaut ? | UX | Charte neutre configurable |
 | **Q-13** | **Mode de diffusion** (logiciel libre, inscription à un socle interministériel, usage interne) | Gouvernance produit | À décider avec le commanditaire |
 | **Q-14** | **Niveau de précision attendu** en ressources : par rôle/profil (proposé) ou nominatif ? (déjà tranché sur le principe : pas de nominatif) | RSR | Rôle/profil/équipe agrégé |
 | **Q-15** | **Part des dépenses numériques** à consolider : seulement la direction du numérique, ou tout l'organisme (réponse aux contrôles) ? | FIN | Tout l'organisme, avec périmètre paramétrable |
-| **Q-16** | **Cible d'effectif** et d'utilisateurs (centaines, milliers) et profil de l'organisme (ministère, direction) ? | Dimensionnement, adoption | À fournir par le commanditaire |
+| **Q-16** | ~~Taille cible ?~~ | — | **Tranchée (D9)** : environ 300 personnes ; à confirmer s'il s'agit de l'organisme entier ou de la seule direction du numérique |
 | **Q-17** | **Langue de travail** : français seul, ou documents en anglais fréquents ? | IAF | Français ; documents en anglais tolérés |
 | **Q-18** | **Canal d'alerte protégée** : l'organisme dispose-t-il d'un dispositif ? Odin y renvoie-t-il seulement ? | RG-24 | Renvoi uniquement |
 | **Q-19** | **Politique de conservation** : durées par type de contenu ? | RG-20 | À fournir par l'organisme/archives |
-| **Q-20** | **Qui pilote le produit** côté organisme (sponsor, product owner, administrateurs, curateurs) ? | Gouvernance, lot 1 | À désigner |
+| **Q-20** | ~~Qui pilote le produit côté organisme ?~~ | — | **Tranchée (D11)** : différents profils peuvent tenir les rôles de pilotage ; attribués par l'organisme |
 | **Q-21** | **Dépôts par courriel ou transfert** : acceptés comme mode de dépôt ? | RAP | Oui, avec contrôle de l'expéditeur |
 
 ## 7. Prochaines étapes suggérées
 
-1. **Relecture** du dossier par le commanditaire ; arbitrage des questions encore ouvertes (Q-09 à Q-21).
+1. **Relecture** du dossier par le commanditaire ; arbitrage des questions encore ouvertes (Q-11, Q-13 à Q-15, Q-17 à Q-19, Q-21).
 2. **Entretiens** avec 6 à 10 personnes représentatives (contributeur, responsable d'application, chef de projet, RSSI, contrôle de gestion, RH, DNUM, direction) pour valider personas, parcours et gabarits.
 3. **Collecte de rapports réels** (anonymisés) pour constituer le jeu de référence de qualité de l'IA et valider le catalogue de faits.
 4. **Choix des paramètres par défaut** (niveaux de classification, grille de priorisation, règles de santé, seuil d'agrégation) avec un organisme pilote.

@@ -139,7 +139,7 @@ Index : P-01 découverte · P-02 déposer un rapport · P-03 rédiger avec gabar
 - **Déclencheur** : échéance mensuelle (rappel) ; événement notable.
 - **Étapes**
   1. Rappel (avec le gabarit préparé, P-03). Le chef de projet dépose son rapport (document ou gabarit).
-  2. Revue des faits (P-05) : avancement, jalons, consommation budgétaire, ETP, risques, dépendances, décisions attendues.
+  2. Revue des faits (P-05) : avancement, jalons, consommation budgétaire, ETP, risques, dépendances, décisions attendues. Les données de l'outil de suivi de projets (Jira) pré-remplissent avancement et jalons (F3) ; Odin signale tout écart avec ce que le responsable déclare.
   3. *E-10 Fiche initiative* : visualisation de la **santé calculée** vs la **santé déclarée** ; en cas d'écart, Odin demande une précision (P-06) **avant** diffusion.
   4. Mise à jour des **bénéfices attendus** et des **décisions à demander** au comité.
   5. Le rapport officiel est **soumis à validation** du commanditaire (si exigé par le gabarit) puis marqué « officiel ».
@@ -230,7 +230,7 @@ Index : P-01 découverte · P-02 déposer un rapport · P-03 rédiger avec gabar
 - **Déclencheur** : cycle de planification ; vacances de poste ; arbitrage.
 - **Étapes**
   1. *E-17 Capacité* : vue **par équipe et par profil** : capacité disponible (internes, prestataires) vs demande (initiatives engagées + run + dette + contraintes externes), avec **taux de charge** agrégé.
-  2. Ajuster les **hypothèses** (congés, part de run, productivité) ; elles sont visibles et datées.
+  2. Ajuster les **hypothèses** (congés, part de run, productivité) ; elles sont visibles et datées. Les **temps imputés**, reçus **déjà agrégés** par équipe, profil et initiative (RG-38), alimentent la charge réelle et sont comparés à la charge prévue.
   3. Identifier **tensions** (profils ou compétences rares), **dépendance aux prestataires**, **vacances de postes** et durée.
   4. Simuler (P-12 scénarios) : recrutement, renfort prestataire, redéploiement entre équipes.
   5. Si l'organisme suit un **plafond d'effectifs** (en ETPT ou autre unité) : consommation vs plafond.
@@ -248,7 +248,7 @@ Index : P-01 découverte · P-02 déposer un rapport · P-03 rédiger avec gabar
   2. **Imputer** les dépenses aux applications, initiatives et services rendus (règles d'allocation visibles, déclarées par le contrôle de gestion).
   3. Voir le **coût complet** d'une application (licences, prestataires, hébergement, ETP valorisés **au niveau agrégé**).
   4. **Consolider** la dépense numérique de l'organisme (vue demandée par les corps de contrôle) ; exporter.
-  5. Comparer prévisions de rapports (budget consommé déclaré) et données financières (fiabilité F3).
+  5. Les finances n'ayant pas de source automatique (D10), le contrôle de gestion **saisit ou importe** budget et dépenses (grille assistée, copier-coller ou import de tableur) ; Odin contrôle totaux, cohérence et doublons, et **détecte les écarts** avec les budgets déclarés dans les rapports (fiabilité maximale F2, sauf pièce).
 - **Alternatives** : dépense sans imputation → file d'imputation ; écart entre budget déclaré dans un rapport et comptabilité → signal.
 - **Résultat** : coûts compréhensibles par la direction, consolidation reproductible.
 - **Modules** : FIN, FOU, TDB.

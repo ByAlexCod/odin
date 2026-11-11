@@ -145,7 +145,7 @@ Règles de relation clés :
 | F0 | **Proposé** | Extrait par l'IA, non encore revu | Affichage marqué « à confirmer » ; jamais dans un indicateur de direction |
 | F1 | **Déclaré** | Saisi ou confirmé par l'auteur du rapport | Vues de travail ; indicateurs avec mention « déclaratif » |
 | F2 | **Validé** | Confirmé par le responsable de l'objet (application, projet…) ou un curateur | Indicateurs de direction |
-| F3 | **Vérifié** | Rapproché d'une source objective (alimentation automatique, pièce justificative, comptabilité) | Indicateurs de direction avec mention « vérifié » ; sert de référence pour détecter les écarts |
+| F3 | **Vérifié** | Alimenté par un outil source (suivi de projets, temps imputés) ou rapproché d'une pièce justificative ; **les finances saisies à la main plafonnent à F2** sauf pièce | Indicateurs de direction avec mention « vérifié » ; sert de référence pour détecter les écarts |
 | F4 | **Périmé / rejeté** | Dépassé par un fait plus récent, ou invalidé | Historique uniquement |
 
 Un indicateur de direction affiche la **répartition de fiabilité** de ses faits sources et sa **fraîcheur** (RG-06).

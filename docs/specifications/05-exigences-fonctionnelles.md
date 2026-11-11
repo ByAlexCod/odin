@@ -4,7 +4,7 @@ Chaque exigence est numérotée `EX-<module>-nn`, formulée du point de vue de l
 **Priorité** : M indispensable · S important · C souhaitable · W reporté. **Lot** : voir fichier 10 (L1 à L6).
 Les règles de gestion `RG-nn` sont au fichier 08 ; les règles IA `IA-nn` au fichier 06.
 
-Modules : ACC accès · RAP rapports · IAF faits et compréhension · REF référentiel du SI · OBJ objectifs · POR demandes et portefeuille · ROA roadmaps et scénarios · DET dette et obsolescence · RSR ressources · FIN finances · FOU fournisseurs et contrats · SEC sécurité et risques · REG contraintes et échéances · DEC décisions et comités · TDB tableaux de bord et alertes · RST restitutions · ASS assistant · QUA qualité des données · NOT notifications et collaboration · ADM administration · AUD audit.
+Modules : ACC accès · RAP rapports · IAF faits et compréhension · REF référentiel du SI · OBJ objectifs · POR demandes et portefeuille · ROA roadmaps et scénarios · DET dette et obsolescence · RSR ressources · FIN finances · FOU fournisseurs et contrats · SEC sécurité et risques · REG contraintes et échéances · ALI alimentations · DEC décisions et comités · TDB tableaux de bord et alertes · RST restitutions · ASS assistant · QUA qualité des données · NOT notifications et collaboration · ADM administration · AUD audit.
 
 ---
 
@@ -187,6 +187,7 @@ Modules : ACC accès · RAP rapports · IAF faits et compréhension · REF réf�
 | EX-FIN-08 | Suivre la **réalisation des bénéfices financiers** attendus par initiative. | S | L5 |
 | EX-FIN-09 | Fournir un **dossier d'arbitrage budgétaire** (besoins, options, impacts, coût de l'inaction). | M | L5 |
 | EX-FIN-10 | Suivre les **dépenses d'IA** (licences, services) comme catégorie à part. | C | L5 |
+| EX-FIN-12 | **Saisie manuelle assistée** du budget et des dépenses (grille, copier-coller depuis un tableur, import de fichier) avec **contrôles** (totaux, cohérence, doublons, imputations manquantes), historique des versions et **validation par le contrôle de gestion** ; fiabilité maximale F2 sauf pièce justificative (D10). | M | L3 |
 
 ## FOU. Fournisseurs, marchés, licences
 
@@ -324,6 +325,22 @@ Odin **ne livre aucun registre de textes ni de procédures** (D5). L'organisme s
 | EX-NOT-06 | **Boîte de tâches** personnelle (à relire, à valider, à répondre, à décider). | M | L1 |
 | EX-NOT-07 | Rappels **calendaires** (rapport mensuel, bilan de décision, échéance de contrat). | M | L1 |
 
+## ALI. Alimentations (sources de données)
+
+Sources identifiées (D10) : outil de suivi de projets (Jira), imputation des temps, fichiers. **Les finances n'ont pas de source automatique** (voir EX-FIN-12). Sans alimentation, Odin fonctionne en mode déclaratif.
+
+| ID | Exigence | Prio | Lot |
+|---|---|---|---|
+| EX-ALI-01 | **Alimentation depuis l'outil de suivi de projets** : avancement, jalons, volumes de travail, états ; correspondance configurable entre projets de l'outil et initiatives, applications, équipes d'Odin. Ces faits sont de niveau F3 (« alimenté »). | M | L2 |
+| EX-ALI-02 | **Alimentation des temps imputés** : charge réelle par **équipe × profil × initiative × période**, **agrégée** ; aucune donnée nominative n'est conservée ni affichée (RG-01, RG-02, RG-38). | M | L3 |
+| EX-ALI-03 | **File de correspondance** : projets, équipes ou profils non reconnus sont proposés à un humain pour rapprochement ; aucune donnée non rapprochée n'alimente un indicateur. | M | L2 |
+| EX-ALI-04 | Chaque alimentation déclare sa **fiabilité**, sa **fréquence**, son **périmètre**, sa **dernière exécution réussie** ; les échecs sont visibles par l'administration. | M | L2 |
+| EX-ALI-05 | **Détection d'écarts** entre données alimentées et faits déclarés (avancement, charge) ; signal et demande de précision (EX-IAF-08). | M | L2 |
+| EX-ALI-06 | Comparer **charge réelle (temps imputés)** et **charge prévue** par profil et initiative ; écarts remontés dans les scénarios et la capacité. | S | L3 |
+| EX-ALI-07 | Une alimentation peut être **suspendue** ou **désactivée** sans perte de l'historique ; Odin reste utilisable en déclaratif. | M | L2 |
+| EX-ALI-08 | **Import de fichiers** (tableur, texte structuré) comme alimentation générique pour toute donnée sans source automatique. | M | L1 |
+| EX-ALI-09 | Les **données de temps** sont soumises au seuil d'agrégation : une équipe sous le seuil est remontée au niveau supérieur (RG-02). | M | L3 |
+
 ## ADM. Administration
 
 | ID | Exigence | Prio | Lot |
@@ -362,12 +379,12 @@ Odin **ne livre aucun registre de textes ni de procédures** (D5). L'organisme s
 | P-05, P-06 | IAF, NOT, RAP |
 | P-07 | RAP, IAF |
 | P-08 | REF, IAF, DET, SEC, FIN |
-| P-09 | POR, ROA, FIN, RSR, IAF |
+| P-09 | POR, ROA, FIN, RSR, IAF, ALI |
 | P-10, P-11 | POR, REG, IAF |
 | P-12, P-13 | POR, ROA, RSR, FIN, DET, REG, DEC |
 | P-14 | DET, SEC, POR, ROA |
 | P-15 | RSR, POR, ROA |
-| P-16, P-17 | FIN, FOU, DEC |
+| P-15, P-16, P-17 | RSR, FIN, FOU, DEC, ALI |
 | P-18 | SEC, DET, DEC |
 | P-19 | REG, ROA, POR |
 | P-20 | DEC, RST, POR, ROA |
