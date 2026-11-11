@@ -41,6 +41,7 @@ Odin est la plateforme où **tous les acteurs d'un organisme public** (agents, d
 | [08-regles-de-gestion-et-transverses.md](08-regles-de-gestion-et-transverses.md) | Règles de gestion, confidentialité, droit des agents, audit, exigences transverses |
 | [09-annexes-gabarits-et-indicateurs.md](09-annexes-gabarits-et-indicateurs.md) | Gabarits de rapports, catalogue d'indicateurs, exemples de contraintes |
 | [10-lots-priorites-et-questions-ouvertes.md](10-lots-priorites-et-questions-ouvertes.md) | Découpage en lots, priorités, critères de recette, questions ouvertes |
+| [lot-1/README.md](lot-1/README.md) | **Spécification détaillée du lot 1** : écrans, règles et calculs, catalogue des faits, 219 cas de test, jeux de données, textes de l'interface |
 
 ## Conventions
 

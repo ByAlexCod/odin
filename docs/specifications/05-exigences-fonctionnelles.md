@@ -89,6 +89,8 @@ Modules : ACC accès · RAP rapports · IAF faits et compréhension · REF réf�
 | EX-REF-12 | Détection de **doublons** et de **chevauchements** fonctionnels entre applications (aide à la rationalisation). | S | L3 |
 | EX-REF-13 | Statut de cycle de vie des applications (en projet → retirée) modifié via décisions tracées. | M | L1 |
 | EX-REF-14 | Rapprochement avec des **solutions déjà disponibles** (applications existantes, solutions mutualisées ou libres connues de l'organisme) lors de l'instruction d'une demande. | C | L3 |
+| EX-REF-15 | Gérer une **fiche initiative légère** (nom, responsable, équipe, applications liées, dates, statut, santé calculée et déclarée) pour permettre le rattachement des rapports de projet dès le lot 1 ; la gestion complète du portefeuille reste au lot 2. | M | L1 |
+| EX-REF-16 | Gérer un **annuaire minimal des personnes** (nom, équipe, profil optionnel, rôles dans Odin) issu de l'identité de l'organisme ; quotités, affectations et temps sont du lot 3. | M | L1 |
 
 ## OBJ. Objectifs et stratégie
 

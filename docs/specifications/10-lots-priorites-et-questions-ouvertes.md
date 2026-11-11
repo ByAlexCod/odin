@@ -21,7 +21,7 @@ L1 est **un prérequis** de tous les autres. L2 et L3 peuvent être menés **en 
 
 ### 2.2 Contenu minimal du lot 1 (pour être utile)
 
-Parcours P-01 à P-08, P-22, P-23 (vue réduite), P-25, P-26 (base), P-27 ; écrans E-00 à E-09, E-24, E-25 (réduite), E-27, E-28 (base) ; gabarits G-01, G-02, G-04, G-05, G-09, G-18 ; indicateurs I-10, I-11, I-23, I-25, I-90 à I-95.
+Parcours P-01 à P-08, P-09 (version légère : rapport d'avancement et santé simple), P-22, P-23 (vue réduite), P-25, P-26 (base), P-27 ; **spécification détaillée : dossier `lot-1/`** ; écrans E-00 à E-09, E-24, E-25 (réduite), E-27, E-28 (base) ; gabarits G-01, G-02, G-04, G-05, G-09, G-18 ; indicateurs I-10, I-11, I-23, I-25, I-90 à I-95.
 
 ## 3. Priorités par axe de la liste initiale de l'utilisateur
 
