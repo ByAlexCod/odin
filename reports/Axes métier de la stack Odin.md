@@ -222,7 +222,7 @@ Format de chaque axe : **Définition** · **Objets clés** · **Indicateurs typi
 - *Objets/exigences* : propriétaire et source de vérité par donnée, complétude, fraîcheur, déclaratif vs automatisé, snapshots, rapprochement finance/ITSM/CMDB/code/SIRH [I].
 - *Constat marché* : première difficulté rapportée des outils EA [S, [communauté LeanIX](https://community.leanix.net/the-americas-user-group-47/navigating-data-quality-challenges-in-leanix-726)] ; privilégier l'alimentation automatique et afficher la fiabilité de chaque donnée [I].
 
-**G3. Mutualisation et multi-entités [+, conditionnel à la cible]**
+**G3. Mutualisation et multi-entités [+, HORS PÉRIMÈTRE INITIAL : décision D3, un client = un organisme]**
 - *Objets* : entité mutualisatrice/utilisatrice, services socle partagés, convention, quote-part, refacturation [I]. Pertinent si des syndicats informatiques ou DSI mutualisées sont clients (maturité très inégale des collectivités [S?]).
 
 **Autres axes cités par les notes, de rang optionnel** : maturité de gouvernance (auto-évaluation type MAGNum 2026, Cigref/IFACI/ISACA France [S?]) ; indicateurs d'ingénierie type DORA (enquête 2025 : l'IA améliore le débit mais reste associée à une baisse de stabilité [S?]) ; benchmark inter-administrations (open data DINUM) [I] ; conduite du changement et capacité d'absorption des métiers (périodes de gel, populations impactées) [I, aucune source] ; santé : CaRE, GHT, HDS [S?/I].
@@ -270,7 +270,7 @@ Priorisation = jugement de synthèse [I], fondé sur la fréquence dans les note
 | Gouvernance politique, élus, calendrier électoral (A2/F3) | Conditionne le séquencement ; entièrement [I], non sourcé. |
 | Suivi des recommandations de contrôle (A4) | Spécifique public ; demandé par la logique d'audit [I]. |
 | Absorption du changement par les métiers | Contrainte de capacité côté métiers, hors DSI ; aucune source [I]. |
-| Mutualisation multi-entités (G3) | Critique si des collectivités via syndicats sont ciblées [S?/I]. |
+| ~~Mutualisation multi-entités (G3)~~ | **Hors périmètre initial (D3 : un client = un organisme)** ; évolution éventuelle ultérieure. |
 | Numérique responsable (E4) | Référentiels publics existants (RGESN) ; obligation légale à confirmer [S?]. |
 | Données et open data (obligations d'ouverture) | Loi pour une République numérique : [CG], non sourcée. |
 
@@ -448,6 +448,8 @@ Contributeurs : agent métier, développeur, chef de projet, architecte, RSSI, D
 | D1 | **Odin évalue des applications et des équipes, pas des personnes** (réponse à la question 1). | Les objets évalués sont l'application, le projet, l'équipe/le service. Aucun indicateur de performance individuelle, aucun classement nominatif. L'IA ne doit pas extraire des rapports un jugement sur une personne nommée : cela devient une règle de conception (filtrage/pseudonymisation des noms, pas d'attribution individuelle). Garde-fou à prévoir : seuil minimal d'effectif pour afficher une métrique d'équipe, car une « équipe » de 1 à 3 personnes équivaut de fait à une évaluation individuelle. |
 | D2 | **« Métiers » = profils RH** (réponse à la question 8) : familles et profils de métiers du numérique, compétences. | Le référentiel de profils (nomenclature Cigref, RMFP dans l'État, référentiels CNFPT ; voir axes D1-D2) sert à la **capacité, aux compétences et à la GEPP** (qui sait faire quoi, risque « personne clé » au niveau du rôle/profil). Il ne sert pas à évaluer des individus. Le sens « capacités métier / services publics » reste nécessaire pour relier applications et missions (axes B1-B3), mais sous ce nom-là, pas sous « métiers ». |
 
+| D3 | **Un client = un seul organisme** (réponse à la question 9). | Pas de structure mutualisatrice ni de multi-entités dans le périmètre : l'axe **G3 (mutualisation, quotes-parts, refacturation entre entités) sort du périmètre initial** et devient une évolution éventuelle ultérieure. Les objets « entité mutualisatrice/utilisatrice » (§7.1) ne sont pas retenus au premier lot. Les services mutualisés **externes** utilisés par l'organisme (briques interministérielles, services d'un syndicat dont il est membre) restent modélisés comme des fournisseurs/services consommés (axes B, D4), pas comme des entités clientes. La question 6 (type d'organisme ciblé) reste ouverte et détermine le gabarit budgétaire (LOLF ou cadre des collectivités). |
+
 **Points de vigilance que ces décisions ne suppriment pas [I, à valider avec le DPO et un juriste]**
 - Évaluer des équipes ne garantit pas, à lui seul, que l'AI Act ne qualifie pas le système de « haut risque » dans le domaine de l'emploi : le critère porte sur l'usage (décisions touchant les personnes, suivi ou évaluation de leur performance). Les notes sont partagées sur le calendrier (report à décembre 2027 pour les usages haut risque emploi, adoption formelle à confirmer, voir §9). La conception doit donc **empêcher** tout usage individuel (agrégation, pas de drill-down nominatif, journalisation des requêtes), et cette garantie doit être documentée.
 - Des **données de profils RH** (compétences, vacances de poste, dépendance à des rôles clés) restent des données personnelles dès qu'un profil est rattaché à une personne identifiable : travailler au niveau rôle/profil/équipe, minimiser, et prévoir l'AIPD et la consultation des instances (CSA/CST/F3SCT, question 5).
@@ -465,7 +467,7 @@ Contributeurs : agent métier, développeur, chef de projet, architecte, RSSI, D
 
 **Complémentaires (jugées nécessaires)**
 8. ~~« Métiers » dans la liste initiale : capacités métier ou profils RH ?~~ **Tranchée (D2) : profils RH.**
-9. Un client = un organisme, ou une structure mutualisatrice avec des dizaines de membres (multi-entités, refacturation) ?
+9. ~~Un client = un organisme, ou une structure mutualisatrice (multi-entités, refacturation) ?~~ **Tranchée (D3) : un seul organisme.**
 10. Périmètre de la finance : suivi budgétaire de la DSI uniquement, ou consolidation de la dépense numérique de toute l'organisation (réponse à la Cour) ?
 11. Niveau de précision attendu en ressources : planification par rôle/compétence (conseillée) ou nominative ?
 12. Odin est-il une source de vérité ou un agrégateur (import de Mercator, Chorus, SIRH, ITSM, Jira/GitLab) ? Quelles sources de données sont accessibles ?
@@ -476,7 +478,7 @@ Contributeurs : agent métier, développeur, chef de projet, architecte, RSSI, D
 17. Licence et diffusion visées (inscription au SILL, open source) : décision stratégique à clarifier.
 
 ### 8.2 Prochaines étapes suggérées pour la spécification (métier uniquement)
-1. Valider avec l'utilisateur la liste des axes et leur priorité (§3), trancher les questions 6 et 9 (les questions 1 et 8 sont tranchées, voir §8.0).
+1. Valider avec l'utilisateur la liste des axes et leur priorité (§3), trancher la question 6 (les questions 1, 8 et 9 sont tranchées, voir §8.0).
 2. Entretiens avec 5 à 8 profils (DSI, RSSI, chef de projet, développeur, DAF, agent métier, DPO, élu) pour documenter les rapports réels, fréquences et formats (lacune §5.1).
 3. Constituer un registre réglementaire initial avec **sources primaires** (Légifrance, EUR-Lex, ANSSI, DINUM), statut juridique et date de vérification pour chaque texte (§9).
 4. Spécifier le modèle conceptuel métier (§7) : glossaire, cardinalités, règles de gestion ; définir précisément ETP/ETPT/prestataire et la hiérarchie d'imputation budgétaire.
