@@ -27,8 +27,8 @@ Les notes ont été rédigées avec 9 à 18 appels de recherche chacune ; aucune
 3. *Optionnels/sectoriels* : maturité de gouvernance (MAGNum), indicateurs d'ingénierie (DORA), benchmark inter-administrations, volet santé (CaRE).
 
 **Points de vigilance du contexte public.**
-- Le secteur public n'est pas un bloc (État, opérateurs, collectivités, syndicats mutualisés, sécurité sociale, hôpitaux/GHT, universités) : Odin doit être **paramétrable par profil d'organisme** [S/I].
-- Les unités et cadres sont spécifiques : **ETPT vs ETP vs plafond d'emplois**, **LOLF** (programme, titres, AE/CP) pour l'État, **M57/AP-CP** pour les collectivités ([S] pour l'ETPT ; [CG] pour le reste).
+- **Cible actée (D4, §8.0) : organismes de l'État**, hors collectivités et hôpitaux. Les passages de ce rapport sur les collectivités (M57, mode léger, syndicats) et la santé (CaRE, HDS, GHT) sont conservés comme contexte mais **hors premier lot**. Un paramétrage par type d'organisme étatique (ministère, direction, opérateur) reste utile [I].
+- Les unités et cadres sont spécifiques : **ETPT vs ETP vs plafond d'emplois**, **LOLF** (programme, titres, AE/CP) pour l'État ([S] pour l'ETPT ; [CG] pour le reste) ; M57/AP-CP concerne les collectivités, hors cible (D4).
 - Le cadre réglementaire est **instable et daté** : seuil d'avis DINUM (9 M€ ou 15 M€, divergence non tranchée), loi Résilience/NIS2 non promulguée selon les notes, calendrier AI Act divergent. Odin doit porter ces règles comme des **données versionnées avec statut juridique**, pas comme du code figé (§4).
 - Contrainte d'éligibilité probable : hébergement souverain (SecNumCloud ou on-premise), accessibilité (RGAA), réversibilité [S/I].
 
@@ -320,7 +320,7 @@ Voir D4. Points saillants [S?] : doctrine cloud, SecNumCloud, SILL (et la logiqu
 Instances, avis obligatoires et suivi de recommandations : objets de A2-A4. Le calendrier électoral (présidentielle 2027, etc.) comme jalon de roadmap est une **inférence non sourcée** [I].
 
 ### 4.6 Typologie des organismes (gabarits)
-Ministère/direction centrale ; opérateur de l'État ; région/département/métropole ; commune/EPCI (souvent via syndicat mutualisé) ; sécurité sociale (COG) ; GHT/hôpital ; université. Odin doit proposer un **mode léger** pour les petites structures sans architecte [I]. Tailles typiques de DSI : non trouvées.
+Ministère/direction centrale ; opérateur de l'État ; région/département/métropole ; commune/EPCI (souvent via syndicat mutualisé) ; sécurité sociale (COG) ; GHT/hôpital ; université. **Décision D4 : seuls les organismes de l'État sont ciblés** (ministère/direction centrale, opérateur de l'État à confirmer) ; le reste de cette typologie est conservé pour mémoire. Le « mode léger » pour petites structures sans architecte n'est pas au premier lot [I]. Tailles typiques de DSI : non trouvées.
 
 ---
 
@@ -450,6 +450,8 @@ Contributeurs : agent métier, développeur, chef de projet, architecte, RSSI, D
 
 | D3 | **Un client = un seul organisme** (réponse à la question 9). | Pas de structure mutualisatrice ni de multi-entités dans le périmètre : l'axe **G3 (mutualisation, quotes-parts, refacturation entre entités) sort du périmètre initial** et devient une évolution éventuelle ultérieure. Les objets « entité mutualisatrice/utilisatrice » (§7.1) ne sont pas retenus au premier lot. Les services mutualisés **externes** utilisés par l'organisme (briques interministérielles, services d'un syndicat dont il est membre) restent modélisés comme des fournisseurs/services consommés (axes B, D4), pas comme des entités clientes. La question 6 (type d'organisme ciblé) reste ouverte et détermine le gabarit budgétaire (LOLF ou cadre des collectivités). |
 
+| D4 | **Cible : organismes de l'État (étatiques)**, hors collectivités territoriales et hors hôpitaux (réponse à la question 6). | Cadre de référence unique : **LOLF** (mission, programme, BOP/UO, titres, AE/CP), **ETPT et plafond d'emplois**, **décret 2019-1088 et avis DINUM**, doctrine « cloud au centre », PSSIE et homologation, nomenclature RMFP, circulaires de l'État. Sortent du premier lot : M57 et AP/CP, référentiels CNFPT/fonction publique territoriale, « mode léger » pour petites collectivités, CaRE/GHT/HDS, spécificités des éditeurs de collectivités. Reste à confirmer le statut des **opérateurs de l'État** (EPA, etc.) et des **organismes de sécurité sociale**, que les notes distinguent de l'État stricto sensu : hypothèse de travail [I] = ministères, directions et opérateurs sous tutelle dans le périmètre ; sécurité sociale hors périmètre tant que non confirmée. |
+
 **Points de vigilance que ces décisions ne suppriment pas [I, à valider avec le DPO et un juriste]**
 - Évaluer des équipes ne garantit pas, à lui seul, que l'AI Act ne qualifie pas le système de « haut risque » dans le domaine de l'emploi : le critère porte sur l'usage (décisions touchant les personnes, suivi ou évaluation de leur performance). Les notes sont partagées sur le calendrier (report à décembre 2027 pour les usages haut risque emploi, adoption formelle à confirmer, voir §9). La conception doit donc **empêcher** tout usage individuel (agrégation, pas de drill-down nominatif, journalisation des requêtes), et cette garantie doit être documentée.
 - Des **données de profils RH** (compétences, vacances de poste, dépendance à des rôles clés) restent des données personnelles dès qu'un profil est rattaché à une personne identifiable : travailler au niveau rôle/profil/équipe, minimiser, et prévoir l'AIPD et la consultation des instances (CSA/CST/F3SCT, question 5).
@@ -462,7 +464,7 @@ Contributeurs : agent métier, développeur, chef de projet, architecte, RSSI, D
 3. Qui valide les faits extraits (auteur, chef de projet, référent SI) ?
 4. Quel niveau de classification maximal accepté (exclure ou non rapports sécurité/RH) ?
 5. Calendrier CSA/CST/F3SCT et AIPD ; DPO impliqué dès la conception.
-6. Cible : organismes de l'État uniquement, ou collectivités/opérateurs/hôpitaux aussi ?
+6. ~~Cible : organismes de l'État uniquement, ou collectivités/opérateurs/hôpitaux aussi ?~~ **Tranchée (D4) : organismes de l'État ; hors collectivités et hôpitaux.** Reste à confirmer : opérateurs de l'État et sécurité sociale.
 7. Intégrer le canal d'alerte interne ou seulement y renvoyer ?
 
 **Complémentaires (jugées nécessaires)**
@@ -478,7 +480,7 @@ Contributeurs : agent métier, développeur, chef de projet, architecte, RSSI, D
 17. Licence et diffusion visées (inscription au SILL, open source) : décision stratégique à clarifier.
 
 ### 8.2 Prochaines étapes suggérées pour la spécification (métier uniquement)
-1. Valider avec l'utilisateur la liste des axes et leur priorité (§3), trancher la question 6 (les questions 1, 8 et 9 sont tranchées, voir §8.0).
+1. Valider avec l'utilisateur la liste des axes et leur priorité (§3), (les questions 1, 6, 8 et 9 sont tranchées, voir §8.0 ; confirmer seulement le périmètre « opérateurs de l'État / sécurité sociale »). Réorienter ensuite le §4 et les gabarits sur le cadre État (LOLF, ETPT, DINUM).
 2. Entretiens avec 5 à 8 profils (DSI, RSSI, chef de projet, développeur, DAF, agent métier, DPO, élu) pour documenter les rapports réels, fréquences et formats (lacune §5.1).
 3. Constituer un registre réglementaire initial avec **sources primaires** (Légifrance, EUR-Lex, ANSSI, DINUM), statut juridique et date de vérification pour chaque texte (§9).
 4. Spécifier le modèle conceptuel métier (§7) : glossaire, cardinalités, règles de gestion ; définir précisément ETP/ETPT/prestataire et la hiérarchie d'imputation budgétaire.
