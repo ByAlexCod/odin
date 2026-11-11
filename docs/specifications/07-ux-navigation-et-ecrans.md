@@ -9,7 +9,7 @@ Les maquettes ci-dessous sont des **schémas fonctionnels en texte** : elles fix
 3. **Une interface, plusieurs profondeurs** : le contributeur voit 5 entrées ; le décideur voit la vue stratégique ; l'expert voit les détails.
 4. **Toujours la source** : tout chiffre, tout fait, toute réponse est à un clic de sa source.
 5. **Toujours la fiabilité** : couleur/étiquette de fiabilité (déclaré, confirmé, validé, vérifié) et fraîcheur visibles sans effort.
-6. **Pas de jugement sur les personnes** : aucune vue ne désigne une personne comme cause d'un problème ; le vocabulaire est celui des objets et des rôles.
+6. **Pas de jugement sur les personnes** : on peut voir qui est affecté à quoi (selon ses droits), jamais une note, un classement ou une comparaison ; aucune vue ne désigne une personne comme cause d'un problème.
 7. **Langage simple** : pas de jargon sans bulle d'aide ; vocabulaire de l'organisme paramétrable.
 8. **Peu de clics** : actions fréquentes en 1 à 3 clics ; confirmations en lot.
 9. **Pas de culpabilisation** : relances sobres, factuelles, utiles.
@@ -218,7 +218,7 @@ Axe temporel par horizons (Maintenant / Prochainement / Plus tard) ; lignes = th
 
 Tableau : élément · type · application · intérêt estimé (fourchette) · effort · échéance critique · statut ; graphique de tendance ; indicateur « part de capacité consacrée à la dette » vs objectif ; action « Planifier dans une initiative », « Accepter (motif, revue) ».
 
-### E-17. Capacité et ressources (agrégé)
+### E-17. Capacité, ressources et affectations
 
 ```
 ┌ Capacité · Direction du numérique · T3 2026 ───────────────────────────────┐
@@ -226,11 +226,11 @@ Tableau : élément · type · application · intérêt estimé (fourchette) · 
 │ Architecte         4,0      6,0     150 %     1,0       1,0 (25 %)     ●●●  │
 │ Développeur        18       17      94 %      2,0       6,0 (33 %)     ●    │
 │ Analyste sécurité  3,0      3,5     117 %     0,0       0              ●●   │
-│ Plafond d'emplois (ETPT) : 112 / 115     Règle de conversion ETP→ETPT [i]   │
-│ ⓘ Équipes de moins de 5 personnes : valeurs remontées au niveau supérieur. │
+│ Plafond d'effectifs (si suivi) : 112 / 115   Règle de conversion [i]       │
+│ [Voir les affectations]  (rôles habilités)                                 │
 └────────────────────────────────────────────────────────────────────────────┘
 ```
-Pas de colonne ni d'export nominatif ; les hypothèses sont modifiables et visibles.
+**Vue Affectations** (rôles habilités, dans leur périmètre) : par équipe, la liste des personnes avec profil, quotité disponible et **répartition entre initiatives** (barres), alerte de **sur-affectation** (> 100 %), temps imputé vs prévu. **Aucun tri ni classement par « performance », aucune comparaison entre personnes.** Les audiences sans droit nominatif voient uniquement le tableau agrégé ; les agrégats sous le seuil sont masqués ou remontés au niveau supérieur. Les hypothèses (congés, part de run, productivité) sont modifiables, visibles et datées.
 
 ### E-18. Finances
 

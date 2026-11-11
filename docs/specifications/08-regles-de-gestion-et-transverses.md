@@ -6,8 +6,8 @@
 
 | ID | Règle |
 |---|---|
-| **RG-01** | **Odin n'évalue pas les personnes** (D1). Aucune vue, aucun export, aucune réponse de l'assistant, aucun fait ne présente de jugement, score, classement, charge, productivité ou activité **par personne**. Les objets évalués sont les applications, projets, équipes (agrégés) et services. |
-| **RG-02** | **Seuil minimal d'agrégation** : une métrique d'équipe n'est affichée que si l'effectif concerné atteint le seuil (valeur par défaut proposée : 5, paramétrable avec journal, **jamais en dessous de 3**). En deçà, la métrique est remontée au niveau supérieur ou masquée. Les croisements successifs ne doivent pas permettre de déduire une valeur individuelle (par exemple par différence). |
+| **RG-01** | **Odin n'évalue pas les personnes** (D1). Odin **peut contenir des données sur les personnes** (nom, rôle, profil, équipe, compétences déclarées, quotité, **répartition entre initiatives**, temps imputés), essentielles à la planification. Il **ne produit ni ne montre** de **note, score de performance ou de productivité, classement, comparaison entre personnes, jugement sur la qualité du travail d'une personne, ni suivi d'activité à des fins de contrôle**. Les objets évalués sont les applications, projets, équipes et services. |
+| **RG-02** | **Visibilité des données nominatives et agrégation** : les données nominatives (affectations, temps, compétences) ne sont visibles que des rôles habilités dans leur périmètre, et de la personne concernée. Les audiences plus larges ne voient que des **agrégats** (équipe, profil, direction). Un agrégat d'effectif inférieur au **seuil** (défaut proposé : 5 ; paramétrable avec journal, **jamais en dessous de 3**) n'est pas affiché aux audiences sans droit nominatif, pour ne pas révéler une valeur individuelle. |
 | **RG-03** | **Niveau par défaut** d'un rapport : N2 (périmètre de rattachement). L'auteur peut restreindre ; il ne peut pas élargir au-delà de son habilitation. |
 | **RG-04** | **Héritage et droits de lecture** : tout fait, synthèse, réponse, restitution ou notification hérite du niveau le plus élevé de ses sources, et n'est lisible que par ceux qui peuvent lire **toutes** les sources utilisées (ou une version expurgée). L'assistant, les synthèses et les exports respectent cette règle. |
 | **RG-05** | **Faits et indicateurs de direction** : un indicateur de direction n'est calculé qu'avec des faits F2 ou F3 ; les faits F1 peuvent y figurer en mention « déclaratif » ; les faits F0 jamais. |
@@ -50,8 +50,8 @@
 | **RG-17** | **Imputation financière** : les règles d'allocation des coûts partagés (hébergement, licences communes) sont déclarées par le contrôle de gestion, visibles et versionnées ; une dépense non imputée est comptée et signalée. |
 | **RG-18** | **Run / build** : classification selon une règle paramétrable (maintenance et exploitation = run ; évolution et projets = build) ; les dépenses ambiguës sont arbitrées par le contrôle de gestion. |
 | **RG-19** | **Échéances de contrats** : alertes graduées paramétrables (par défaut 180/90/30 jours avant le préavis) ; un préavis dépassé crée un signal critique avec les options restantes. |
-| **RG-37** | Aucune **valorisation financière individuelle** de personnes : les coûts de ressources sont présentés au niveau agrégé (équipe, profil, service). |
-| **RG-38** | **Données de temps et d'activité** : les temps imputés et toute donnée d'activité sont **agrégés dès l'alimentation** (équipe × profil × initiative × période) ; Odin ne conserve, n'affiche ni n'exporte aucune donnée **nominative** de temps ; une alimentation qui n'a pas pu être agrégée est rejetée. Aucun usage de ces données pour juger, classer ou suivre des personnes (RG-01). |
+| **RG-37** | Les **coûts** de ressources sont présentés au niveau agrégé (équipe, profil, service) ; **aucune rémunération individuelle** n'est stockée ni affichée (Odin valorise à un coût moyen par profil, paramétrable). |
+| **RG-38** | **Données de temps et d'affectation** : les temps imputés et les affectations nominatives alimentent la **charge prévue et réelle** (planification) ; ils ne sont visibles que des rôles habilités et de la personne concernée ; ils ne servent à aucune évaluation, comparaison ou classement de personnes (RG-01). Les vues larges sont agrégées (RG-02). |
 
 ### 1.5 Décisions, conservation, droits
 
@@ -81,7 +81,7 @@ Les valeurs chiffrées sont des **objectifs de départ** à confirmer ; leur ré
 
 - **ET-06.** **Recommandation de déploiement** (non bloquante) : associer le DPO dès la conception et réaliser une analyse d'impact si l'organisme le juge nécessaire.
 - **ET-07.** **Recommandation** : informer les agents et les instances de dialogue social de l'organisme des finalités et garanties (pas d'évaluation individuelle, agrégation, transparence sur l'IA).
-- **ET-08.** **Finalité limitée** : les données de contribution ne servent à aucun usage d'évaluation, de contrôle d'activité ou de décision individuelle (RG-01).
+- **ET-08.** **Finalité limitée** : les données sur les personnes servent à la **planification** (affectations, capacité, compétences) ; elles ne servent à aucun usage d'évaluation, de classement, de comparaison ou de contrôle d'activité (RG-01).
 - **ET-09.** **Qualification de l'IA** : par construction, Odin n'évalue pas les personnes (RG-01, RG-02, IA-08, IA-09), ce qui limite structurellement les usages « gestion des travailleurs » ; une revue juridique éventuelle reste de la responsabilité de l'organisme.
 - **ET-10.** **Droits des agents** : accès, rectification, retrait, information sur l'usage de leurs contributions (P-27).
 
@@ -109,7 +109,7 @@ Les valeurs chiffrées sont des **objectifs de départ** à confirmer ; leur ré
 ### 2.6 Alimentations et interfaces (besoins, sans choix technique)
 
 - **ET-23.** **Alimentation initiale** du référentiel (applications, organisation) par import de fichiers ou de sources de l'organisme.
-- **ET-24.** **Alimentations identifiées (D10)** : outil de suivi de projets (Jira) pour avancement, jalons et volumes ; **imputation des temps** pour la charge réelle, **agrégée** (RG-38) ; **finances saisies manuellement** (EX-FIN-12) ; import de fichiers pour l'existant. D'autres alimentations restent possibles ultérieurement.
+- **ET-24.** **Alimentations identifiées (D10)** : outil de suivi de projets (Jira) pour avancement, jalons et volumes ; **imputation des temps** pour la charge réelle (RG-38) ; **finances saisies manuellement** (EX-FIN-12) ; import de fichiers pour l'existant. D'autres alimentations restent possibles ultérieurement.
 - **ET-25.** Chaque alimentation déclare sa **fiabilité** (F3 si objective), sa **fréquence** et son **périmètre**.
 - **ET-26.** **Ouverture** : Odin expose aux autres outils de l'organisme les objets et indicateurs, selon les droits.
 

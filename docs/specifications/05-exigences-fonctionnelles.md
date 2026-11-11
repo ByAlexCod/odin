@@ -76,7 +76,7 @@ Modules : ACC accès · RAP rapports · IAF faits et compréhension · REF réf�
 | ID | Exigence | Prio | Lot |
 |---|---|---|---|
 | EX-REF-01 | Gérer les **applications** avec leur fiche (OBJ-12), responsable, équipe, services rendus servis, criticité, cycle de vie. | M | L1 |
-| EX-REF-02 | Gérer les **équipes** et leur rattachement organisationnel, avec effectifs **agrégés par profil**. | M | L1 |
+| EX-REF-02 | Gérer les **équipes** : rattachement, applications portées, **membres**, effectif par profil. | M | L1 |
 | EX-REF-03 | Gérer les **services rendus** et leurs liens avec applications et processus ; calculer la criticité de continuité. | M | L1 |
 | EX-REF-04 | Gérer les **technologies** avec dates de fin de support et lien vers les applications. | S | L2 |
 | EX-REF-05 | Gérer **données** et **flux** à un niveau utile à la décision (nature, sensibilité, criticité). | C | L3 |
@@ -159,19 +159,21 @@ Modules : ACC accès · RAP rapports · IAF faits et compréhension · REF réf�
 
 | ID | Exigence | Prio | Lot |
 |---|---|---|---|
-| EX-RSR-01 | Gérer un **référentiel de profils** (familles et profils de métiers du numérique, référentiel au choix de l'organisme, D2) et de **compétences**. | M | L3 |
+| EX-RSR-01 | Gérer un **référentiel de profils** (familles et profils de métiers du numérique, D2, D12), de **compétences** et les **personnes** (nom, équipe, profil, statut, quotité, compétences déclarées). | M | L3 |
 | EX-RSR-02 | Gérer la **capacité par équipe et par profil** (internes titulaires, contractuels, prestataires) en ETP, avec hypothèses explicites (congés, part de run, productivité). | M | L3 |
 | EX-RSR-03 | Gérer la **demande de charge** par initiative, run, dette, contraintes externes, par profil et période. | M | L3 |
 | EX-RSR-04 | Afficher **capacité vs demande** et **taux de charge agrégés** ; signaler les tensions par profil et par compétence rare. | M | L3 |
 | EX-RSR-05 | Gérer les **postes vacants** et besoins de recrutement par profil (durée de vacance, tension, impact sur initiatives). | M | L3 |
 | EX-RSR-06 | Suivre la **dépendance aux prestataires** (part par équipe, par application, par profil ; échéance de contrats). | M | L3 |
 | EX-RSR-07 | Suivre, **si l'organisme en a un**, un **plafond d'effectifs** (en ETPT ou autre unité) ; **règle de conversion ETP ↔ unité du plafond** visible (RG-16). | S | L3 |
-| EX-RSR-08 | Aucune vue ne présente de donnée **par personne** ; seuil minimal d'effectif d'agrégation appliqué (RG-01, RG-02). | M | L3 |
-| EX-RSR-09 | Identifier les **risques de dépendance à un rôle ou une compétence** (fonction portée par peu de personnes) **sans nommer de personne**. | S | L3 |
+| EX-RSR-08 | **Aucune vue ni export n'évalue, ne note, ne classe ni ne compare des personnes** (RG-01) ; les données nominatives (affectations, temps, compétences) ne sont visibles que des rôles habilités et de la personne concernée ; les audiences larges voient des agrégats (RG-02). | M | L3 |
+| EX-RSR-09 | Identifier les **risques de dépendance à un rôle, une compétence ou une personne** (fonction portée par peu de personnes) ; visible des rôles habilités. | S | L3 |
 | EX-RSR-10 | Intégrer dans les **scénarios** des variations de capacité (recrutement, renfort, redéploiement). | M | L3 |
 | EX-RSR-11 | Visualiser l'**évolution** de la capacité et des vacances dans le temps. | S | L3 |
-| EX-RSR-12 | Alimentation possible depuis des **sources RH** de l'organisme, sous forme agrégée. | S | L3 |
-| EX-RSR-13 | Gérer les **plans de formation** au niveau profil/compétence (besoins agrégés) sans suivi nominatif. | C | L6 |
+| EX-RSR-12 | Alimentation possible depuis des **sources RH** de l'organisme (personnes, équipes, quotités). | S | L3 |
+| EX-RSR-13 | Gérer les **plans de formation** au niveau profil et compétence. | C | L6 |
+| EX-RSR-14 | Gérer les **affectations** : répartition de chaque personne entre initiatives et applications (quotité, période), **charge prévue** par personne, équipe et profil ; **alerte de sur-affectation** (> 100 %). | M | L3 |
+| EX-RSR-15 | Une personne voit **ses propres affectations et temps** ; les corrections passent par son responsable. | S | L3 |
 
 ## FIN. Finances
 
@@ -332,14 +334,14 @@ Sources identifiées (D10) : outil de suivi de projets (Jira), imputation des te
 | ID | Exigence | Prio | Lot |
 |---|---|---|---|
 | EX-ALI-01 | **Alimentation depuis l'outil de suivi de projets** : avancement, jalons, volumes de travail, états ; correspondance configurable entre projets de l'outil et initiatives, applications, équipes d'Odin. Ces faits sont de niveau F3 (« alimenté »). | M | L2 |
-| EX-ALI-02 | **Alimentation des temps imputés** : charge réelle par **équipe × profil × initiative × période**, **agrégée** ; aucune donnée nominative n'est conservée ni affichée (RG-01, RG-02, RG-38). | M | L3 |
+| EX-ALI-02 | **Alimentation des temps imputés** : temps par **personne × initiative × période** et agrégats par équipe et profil ; visibilité selon droits ; jamais utilisés pour évaluer (RG-01, RG-38). | M | L3 |
 | EX-ALI-03 | **File de correspondance** : projets, équipes ou profils non reconnus sont proposés à un humain pour rapprochement ; aucune donnée non rapprochée n'alimente un indicateur. | M | L2 |
 | EX-ALI-04 | Chaque alimentation déclare sa **fiabilité**, sa **fréquence**, son **périmètre**, sa **dernière exécution réussie** ; les échecs sont visibles par l'administration. | M | L2 |
 | EX-ALI-05 | **Détection d'écarts** entre données alimentées et faits déclarés (avancement, charge) ; signal et demande de précision (EX-IAF-08). | M | L2 |
 | EX-ALI-06 | Comparer **charge réelle (temps imputés)** et **charge prévue** par profil et initiative ; écarts remontés dans les scénarios et la capacité. | S | L3 |
 | EX-ALI-07 | Une alimentation peut être **suspendue** ou **désactivée** sans perte de l'historique ; Odin reste utilisable en déclaratif. | M | L2 |
 | EX-ALI-08 | **Import de fichiers** (tableur, texte structuré) comme alimentation générique pour toute donnée sans source automatique. | M | L1 |
-| EX-ALI-09 | Les **données de temps** sont soumises au seuil d'agrégation : une équipe sous le seuil est remontée au niveau supérieur (RG-02). | M | L3 |
+| EX-ALI-09 | Les **temps imputés** sont visibles des seuls rôles habilités et de la personne concernée ; les vues larges sont agrégées (RG-02). | M | L3 |
 
 ## ADM. Administration
 

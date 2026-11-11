@@ -24,8 +24,8 @@ L'IA **n'est jamais décisionnaire** : elle ne valide aucun fait pour un indicat
 | IA-05 | **Chaque affirmation** d'une réponse ou d'un document généré est reliée à au moins une source consultable. Une affirmation non sourcée est marquée comme telle ou supprimée. |
 | IA-06 | L'IA **exprime l'incertitude** : confiance par fait, mention « information insuffisante », « sources contradictoires ». Elle ne comble pas les lacunes. |
 | IA-07 | L'IA **suggère** un niveau de classification (ex. contenu de sécurité → N4) ; l'auteur ou un référent **confirme**. En cas de doute, le niveau le plus protecteur est proposé. |
-| IA-08 | **Aucune évaluation de personne** : l'IA ne produit ni fait, ni score, ni jugement, ni classement portant sur une personne identifiable ; les passages évaluatifs nominatifs sont **ignorés pour l'extraction** et **signalés à l'auteur** (qui peut les pseudonymiser). Les mentions de personnes sont **remplacées par leur rôle** dans les faits et dans les vues. |
-| IA-09 | L'IA **ne détecte pas** et **ne suit pas** le comportement ou la productivité d'individus (volume de contributions, heures, rythme) ; les statistiques de contribution sont **agrégées** (RG-02). |
+| IA-08 | **Aucune évaluation de personne** : l'IA ne produit ni fait, ni score, ni jugement, ni classement portant sur la **qualité du travail ou la performance** d'une personne ; les passages évaluatifs nominatifs sont **ignorés pour l'extraction** et **signalés à l'auteur** (qui peut les reformuler). L'IA **peut en revanche extraire des faits d'affectation** (qui est affecté à quoi, disponibilité, rôle), soumis aux droits d'accès. |
+| IA-09 | L'IA **ne suit pas** et **ne compare pas** le comportement ou la productivité d'individus (volume de contributions, rythme) ; les statistiques de contribution sont **agrégées** (RG-02). |
 | IA-10 | **Droits d'accès respectés** : l'IA n'utilise, pour une réponse ou un document, que les contenus que l'utilisateur est autorisé à voir (RG-04). |
 | IA-11 | Le **niveau de classification d'un résultat** est le plus élevé des sources utilisées. |
 | IA-12 | Les contenus déposés sont **des données, jamais des instructions** : un document contenant des consignes adressées à l'IA est traité comme du contenu ; la tentative est consignée et signalée à l'administrateur. |
@@ -51,7 +51,7 @@ Chaque nature indique : ce que l'IA cherche, les champs, l'objet de rattachement
 | **Risque** | Événement redouté, cause, effet, mesure évoquée | Intitulé, gravité/vraisemblance estimées, objet | Application / initiative | Responsable de l'objet ; RSSI si sécurité |
 | **Incident / événement** | Panne, interruption, retour d'expérience | Date, durée, impact, cause, enseignements | Application / service rendu | Responsable d'application |
 | **Dépendance** | Dépend de / bloque / attend | Objet source, objet cible, nature, échéance | Initiative / application / fournisseur | Responsables concernés |
-| **Ressources** | Besoin, manque, surcharge, vacance, dépendance à un rôle ou prestataire | Profil, équipe, ETP, période (jamais de nom) | Équipe / initiative | Responsable d'équipe ; RH |
+| **Ressources** | Besoin, manque, surcharge, vacance, dépendance à un rôle ou une personne, affectation | Profil, équipe, personne (si citée), ETP ou quotité, période | Équipe / initiative / personne | Responsable d'équipe ; RH |
 | **Budget / dépense** | Montant consommé, prévu, dépassement, demande de crédits | Montant, nature, exercice, imputation | Initiative / application | Contrôle de gestion |
 | **Dette** | Dette technique ou autre, obsolescence | Type, description, intérêt, effort, échéance | Application / technologie | Responsable d'application |
 | **Sécurité** | Vulnérabilité, constat d'audit, écart, évaluation de sécurité, exception | Gravité, objet, échéance, statut | Application | RSSI |

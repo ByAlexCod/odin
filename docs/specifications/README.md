@@ -14,7 +14,7 @@ Odin est la plateforme où **tous les acteurs d'un organisme public** (agents, d
 | # | Décision | Source |
 |---|---|---|
 | D0 | Public cible principal : organismes publics ; tout le monde (agents, développeurs, chefs de projet, etc.) peut se connecter et partager des rapports ; l'IA comprend ces rapports et en produit. | Échanges du 11/11/2026 |
-| D1 | Odin évalue des **applications et des équipes**, **jamais des personnes**. | Échanges du 11/11/2026 |
+| D1 | Odin **évalue des applications et des équipes, jamais des personnes**. Il **peut contenir des données sur les personnes** (noms, profils, compétences, répartition entre projets, temps imputés), essentielles à la planification ; il ne les note, ne les classe ni ne les compare. | Échanges du 11/11/2026 |
 | D2 | « Métiers » = **profils RH** (familles et profils de métiers du numérique, compétences). Le sens « capacité métier / mission » devient « **Service rendu** » dans ce dossier. | Échanges du 11/11/2026 |
 | D3 | **Un client = un seul organisme** (pas de multi-organismes ni de refacturation entre entités). | Échanges du 11/11/2026 |
 | D4 | Cible : **organismes publics, en priorité de l'État**. **Chaque organisme configure son instance selon ses propres règles** (nomenclature budgétaire, rôles, seuils, classification, vocabulaire). Aucun périmètre (ministère, opérateur, sécurité sociale…) n'est codé en dur. | Échanges du 11/11/2026 |

@@ -10,7 +10,9 @@
 | **Application** | Ensemble logiciel qui rend un service fonctionnel (y compris les services SaaS utilisés). |
 | **Technologie** | Produit ou composant technique (système, logiciel de base, langage, plateforme) avec un cycle de vie (support, fin de vie). |
 | **Équipe** | Groupe stable de personnes qui porte une ou plusieurs applications ou activités. Unité d'évaluation et de capacité (D1). |
-| **Profil** | Profil de métier du numérique (famille + intitulé de référentiel RH), utilisé pour la capacité et les compétences (D2). Ce n'est **pas** une personne. |
+| **Profil** | Profil de métier du numérique (famille + intitulé de référentiel RH) : sert à la capacité, aux compétences et à la GEPP (D2). Une personne a un profil. |
+| **Personne** | Agent ou prestataire de l'organisme : nom, équipe, profil, quotité, compétences déclarées. **Jamais évaluée** (D1). |
+| **Affectation** | Répartition d'une personne entre initiatives ou applications (quotité, période), et temps imputé réel. Donnée de **planification**. |
 | **Compétence** | Savoir-faire attaché à un profil ou une technologie, avec niveau requis. |
 | **Initiative** | Projet, programme, chantier ou évolution majeure inscrit au portefeuille. |
 | **Demande** | Besoin exprimé (métier ou SI) avant qualification en initiative. |
@@ -42,12 +44,14 @@ Chaque objet porte au minimum : identifiant, nom, description, responsable, stat
 |---|---|---|---|
 | OBJ-01 | **Organisme** | Nom, tutelle, type (ministère, direction, opérateur), exercice courant | Un seul par déploiement |
 | OBJ-02 | **Direction / service** | Nom, rattachement hiérarchique, responsable | Hiérarchie d'unités |
-| OBJ-03 | **Équipe** | Nom, mission, rattachement, applications portées, effectif **agrégé** par profil | Aucun lien vers des personnes affiché dans les vues de pilotage |
+| OBJ-03 | **Équipe** | Nom, mission, rattachement, applications portées, **membres**, effectif par profil | Unité d'évaluation avec les applications (D1) |
 | OBJ-04 | **Profil** | Famille, intitulé (référentiel), niveau, statut (titulaire, contractuel, prestataire) | Référentiel interne, alignable sur le référentiel choisi par l'organisme (D2) |
 | OBJ-05 | **Compétence** | Libellé, domaine, technologie liée, niveau | Rareté, criticité |
-| OBJ-06 | **Capacité** | Équipe × profil × période : ETP disponibles (internes, prestataires) | Calculée à partir d'hypothèses (congés, productivité) |
+| OBJ-06 | **Capacité** | Équipe × profil × période : ETP disponibles (internes, prestataires) | Calculée à partir des personnes, de leur quotité et d'hypothèses (congés, productivité) |
 | OBJ-07 | **Poste vacant / besoin de recrutement** | Profil, équipe, durée de vacance, tension | Non nominatif |
 | OBJ-08 | **Plafond d'effectifs (optionnel)** | ETPT, ETP, exercice | Contrainte, saisie par la fonction RH ou financière |
+| OBJ-09 | **Personne** | Nom, équipe, profil, statut (titulaire, contractuel, prestataire), quotité, compétences déclarées, dates de présence | **Aucun champ d'évaluation** (RG-01) ; visibilité par droits (RG-02) |
+| OBJ-09b | **Affectation** | Personne × initiative ou application × période × quotité prévue ; temps imputé (réel) | Base de la charge prévue et réelle ; alerte de sur-affectation |
 
 ### 2.2 Patrimoine du SI
 
@@ -134,6 +138,7 @@ Restitutions ─ composées de ─ Indicateurs, Faits, Décisions (avec sources)
 
 Règles de relation clés :
 - Une **application** a au moins une équipe responsable et un responsable d'application nommé (sinon elle est signalée « orpheline »).
+- Une **personne** appartient à une équipe, a un profil et des **affectations** (initiative × période × quotité) ; elle n'a **aucun champ d'évaluation**.
 - Une **initiative** sert au moins un objectif ou un service rendu, ou est marquée « hors stratégie » (transparence).
 - Une **contrainte externe** porte toujours sa source (texte libre), son responsable et sa date de dernière mise à jour.
 - Un **fait** est toujours relié à un rapport source (ou à une saisie manuelle identifiée) ; un fait sans source n'existe pas.

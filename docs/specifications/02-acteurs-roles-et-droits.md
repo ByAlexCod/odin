@@ -7,11 +7,11 @@
 | **Camille, développeuse** (équipe applicative) | Écrit des comptes rendus techniques, signale de la dette, post-mortems | Déposer vite, ne pas ressaisir, voir que son signal est pris en compte | Formulaire long ; sentiment d'être surveillée ; aucun retour |
 | **Karim, chef de projet** | Rapport d'avancement mensuel, dépendances, budget du projet | Un seul rapport qui alimente tout ; moins de relances | Double saisie ; indicateurs contradictoires avec ce qu'il a déclaré sans explication |
 | **Nadia, responsable d'application** | Porte une application (évolutions, incidents, fin de support) | Une fiche vivante, alimentée par les rapports, et qui défend son budget | Données obsolètes ; fiche qu'elle doit tout remplir |
-| **Paul, chef de bureau / responsable d'équipe** | Équipe de 8 personnes, plan de charge, recrutement | Capacité vs demande, vacances de postes, besoins de compétences | Vue individuelle exigée par la hiérarchie ; chiffres jugés injustes |
+| **Paul, chef de bureau / responsable d'équipe** | Équipe de 8 personnes, plan de charge, recrutement | Capacité vs demande, répartition de son équipe entre projets, besoins de compétences | Chiffres utilisés pour juger ou comparer ses collaborateurs |
 | **Sophie, architecte / urbaniste** | Cartographie, trajectoires, principes d'architecture | Référentiel qui se met à jour avec les rapports ; analyses d'impact | Référentiel périmé, double maintenance |
 | **Marc, RSSI** | Posture, risques, évaluations de sécurité, audits | Remontées de sécurité reliées aux applications ; dossier pour la direction | Confidentialité insuffisante des contenus sensibles |
 | **Léa, contrôleuse de gestion SI** | Budget, exécution, coûts par service | Consolidation de la dépense numérique, run / build | Chiffres hors périmètre budgétaire de l'organisme ; rapprochements manuels |
-| **Hélène, responsable RH du numérique** | GEPP, recrutements, profils, prestataires | Capacité par profil, tensions de compétences, dépendances | Outil qui évalue les individus ; données nominatives exposées |
+| **Hélène, responsable RH du numérique** | GEPP, recrutements, profils, prestataires | Capacité par profil, tensions de compétences, dépendances, affectations | Outil qui évalue les individus ; accès nominatif trop large |
 | **Antoine, directeur du numérique (DNUM)** | Arbitrages, comités, relation avec le cabinet et la tutelle | Vue unifiée, scénarios, notes et présentations prêtes, traçabilité | Chiffres non fiables ; rapports non défendables devant un contrôle |
 | **Isabelle, secrétaire générale / directrice (lectrice décisionnelle)** | Reçoit synthèses et alertes | Une synthèse claire, des décisions à prendre, peu de jargon | Trop de détails ; jargon technique |
 | **Julien, auditeur / contrôle interne** | Vérifie la traçabilité, suit les recommandations | Retrouver qui a décidé quoi, sur quelle base | Historique modifiable ; faits sans source |
@@ -27,12 +27,12 @@ Un utilisateur peut cumuler plusieurs rôles. Les rôles sont **fonctionnels** (
 | R02 | **Contributeur externe** | Prestataire : dépose uniquement sur les périmètres (projets, applications) qui lui sont ouverts ; lecture limitée à ce qu'il a déposé et aux éléments explicitement partagés. |
 | R03 | **Responsable d'application** | Propriétaire d'une ou plusieurs applications : valide les faits la concernant, maintient la fiche, répond aux demandes de précision. |
 | R04 | **Responsable de projet / d'initiative** | Valide les faits d'un projet, porte les rapports officiels d'avancement, les jalons et bénéfices. |
-| R05 | **Responsable d'équipe** | Voit les informations agrégées de son équipe (capacité, charge, rapports déposés), jamais de vue individuelle (RG-01). |
+| R05 | **Responsable d'équipe** | Voit et gère les affectations et la capacité de son équipe ; ne dispose d'aucune vue d'évaluation ou de comparaison de personnes (RG-01). |
 | R06 | **Architecte / urbaniste** | Maintient le patrimoine (services rendus, flux, technologies), valide les rattachements, mène les analyses d'impact. |
 | R07 | **Responsable sécurité (RSSI) et correspondants** | Voit et valide les faits de sécurité et de risque ; accède aux contenus sensibles de sécurité. |
 | R08 | **Délégué à la protection des données (DPO)** | Accède aux éléments de conformité des données personnelles et à la journalisation d'usage de l'IA ; reçoit les alertes de données personnelles. |
 | R09 | **Contrôle de gestion SI / finances** | Gère budgets, dépenses, imputations, consolidation. |
-| R10 | **RH du numérique (GEPP)** | Gère profils, compétences, vacances de postes, capacité par profil ; accède aux données RH **agrégées par rôle**. |
+| R10 | **RH du numérique (GEPP)** | Gère profils, compétences, vacances de postes, capacité par profil ; accède aux données de ressources et d'affectation dans son périmètre. |
 | R11 | **Achats / marchés** | Gère contrats, marchés, licences, échéances. |
 | R12 | **PMO / bureau de portefeuille** | Qualifie les demandes, prépare l'arbitrage, tient le portefeuille et les roadmaps. |
 | R13 | **Décideur (DNUM, directions)** | Arbitre, décide, valide les notes de décision, consulte la vue stratégique. |
@@ -83,7 +83,7 @@ Les droits s'exercent **dans le périmètre** attribué (sauf mention « tout »
 | Gérer demandes et portefeuille | C (demande) | – | C | C | C | C | C | C | C | M | V | L | L | – | – |
 | Gérer roadmaps | L | – | L | M (ses initiatives) | L | M | L | L | L | M | V | L | L | – | – |
 | Gérer dette | C | – | M | – | C | M | C | – | – | L | V (priorisation) | L | L | – | – |
-| Gérer ressources (agrégé) | – | – | – | L | L (son équipe) | L | – | L | M | L | L | L (synthèse) | L | – | – |
+| Ressources et affectations (nominatives selon droits) | L (les siennes) | – | L (son application) | M (son projet) | M (son équipe) | L | – | L (coûts agrégés) | M | M | L | L (synthèse) | L (habilité) | – | – |
 | Gérer finances | – | – | L (son appli) | L (son projet) | – | – | – | M | – | L | L | L (synthèse) | L | – | – |
 | Gérer contrats et marchés | – | – | L (son appli) | L (son projet) | – | L | – | L | – | L | L | L (synthèse) | L | – | – |
 | Sécurité et risques (N4) | C (signal) | – | L (son appli) | L (son projet) | – | L | M | – | – | L | V (acceptation) | L (synthèse) | L (habilité) | – | – |
@@ -99,8 +99,8 @@ Le rôle **R08 (DPO)** voit le registre d'usage de l'IA, les alertes de données
 ## 5. Règles d'accès complémentaires
 
 - **A-01.** Un utilisateur ne voit jamais, dans une synthèse, une réponse de l'assistant ou un rapport généré, d'information qu'il n'aurait pas pu consulter directement (RG-04).
-- **A-02.** Les vues relatives aux ressources sont **agrégées par équipe, profil ou rôle**. Aucune vue ne présente de charge, de productivité ou de « performance » par personne (RG-01). Pas de classement entre personnes.
-- **A-03.** L'**effectif minimal d'agrégation** (valeur par défaut proposée : 5 personnes ; paramétrable) conditionne l'affichage de toute métrique d'équipe ; en deçà, la métrique est remontée au niveau supérieur ou masquée (RG-02).
+- **A-02.** Les **affectations et temps nominatifs** sont visibles des rôles habilités dans leur périmètre (responsable d'équipe pour son équipe, responsable de projet pour son projet, RH, PMO, décideur) ; chacun voit les siens ; les autres audiences voient des **agrégats**. **Aucune vue n'évalue, ne classe ni ne compare des personnes** (RG-01).
+- **A-03.** Le **seuil minimal d'agrégation** (défaut proposé : 5 ; jamais en dessous de 3) s'applique aux **agrégats montrés aux audiences sans droit nominatif** (RG-02).
 - **A-04.** Les accès à des contenus N4 sont **journalisés** et consultables par le DPO et l'auditeur.
 - **A-05.** Les droits des prestataires (R02) sont limités dans le temps (date de fin liée au contrat) et révoqués automatiquement à l'échéance.
 - **A-06.** Les **délégations** (absence, intérim) sont possibles pour les rôles de validation (R03, R04, R13), tracées et limitées dans le temps.

@@ -229,15 +229,15 @@ Index : P-01 découverte · P-02 déposer un rapport · P-03 rédiger avec gabar
 - **Acteur** : R05, R10, R12, R13.
 - **Déclencheur** : cycle de planification ; vacances de poste ; arbitrage.
 - **Étapes**
-  1. *E-17 Capacité* : vue **par équipe et par profil** : capacité disponible (internes, prestataires) vs demande (initiatives engagées + run + dette + contraintes externes), avec **taux de charge** agrégé.
-  2. Ajuster les **hypothèses** (congés, part de run, productivité) ; elles sont visibles et datées. Les **temps imputés**, reçus **déjà agrégés** par équipe, profil et initiative (RG-38), alimentent la charge réelle et sont comparés à la charge prévue.
+  1. *E-17 Capacité* : vue **par équipe et par profil** : capacité disponible (internes, prestataires) vs demande (initiatives engagées + run + dette + contraintes externes), avec **taux de charge**. Les rôles habilités ouvrent le détail des **affectations par personne** (quotité, répartition entre initiatives).
+  2. Ajuster les **hypothèses** (congés, part de run, productivité) ; elles sont visibles et datées. Les **temps imputés** (par personne, visibles selon droits, RG-38) alimentent la charge réelle et sont comparés à la charge prévue.
   3. Identifier **tensions** (profils ou compétences rares), **dépendance aux prestataires**, **vacances de postes** et durée.
   4. Simuler (P-12 scénarios) : recrutement, renfort prestataire, redéploiement entre équipes.
   5. Si l'organisme suit un **plafond d'effectifs** (en ETPT ou autre unité) : consommation vs plafond.
-- **Alternatives** : équipe sous le seuil d'agrégation → métriques masquées ou remontées au niveau supérieur (RG-02) ; demande d'une **vue nominative** → refusée avec explication (RG-01).
+- **Alternatives** : sur-affectation d'une personne → alerte de planification (pas un jugement) ; demande de **classer ou comparer des personnes** → refusée avec explication (RG-01) ; audience sans droit nominatif → agrégats seulement, masqués sous le seuil (RG-02).
 - **Résultat** : décisions de recrutement, de redéploiement et d'arbitrage fondées sur la capacité réelle par profil.
 - **Modules** : RSR, POR, ROA.
-- **Critères** : *Étant donné* une équipe de 3 personnes, *quand* un responsable ouvre la vue capacité, *alors* les indicateurs de charge ne sont pas affichés à son niveau (seuil d'agrégation) mais remontés au niveau supérieur.
+- **Critères** : *Étant donné* une personne affectée à 120 % sur trois initiatives, *quand* un responsable habilité ouvre les affectations, *alors* il voit la répartition et une alerte de sur-affectation ; *Étant donné* une demande de « classement des plus performants » (vue ou assistant), *alors* elle est refusée.
 
 ## P-16. Piloter le budget et les coûts
 

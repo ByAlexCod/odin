@@ -25,7 +25,7 @@ Chaque gabarit : **public/auteur**, **périodicité**, **durée de validité**, 
 | G-17 | **Satisfaction et qualité de service** | Responsable de service | Trimestrielle | 120 j | Retours d'usage, indicateurs de qualité | Satisfaction |
 | G-18 | **Document libre** | Tout contributeur | — | 12 mois | — | Selon extraction |
 
-Règles d'écriture communes affichées dans l'éditeur : *décrire des faits et des situations, pas des personnes ; nommer des rôles plutôt que des noms ; signaler une source ; indiquer la période*.
+Règles d'écriture communes affichées dans l'éditeur : *décrire des faits et des situations ; on peut nommer des personnes pour les affectations et les responsabilités, **jamais pour les juger** ; signaler une source ; indiquer la période*.
 
 ## 2. Gabarits de restitutions
 
@@ -83,14 +83,14 @@ Principes : peu d'indicateurs, chacun relié à une **décision**. Pour chaque i
 | I-25 | Applications orphelines | Sans responsable / sans équipe | A | Désigner |
 | I-26 | Doublons fonctionnels | Services rendus servis par plusieurs applications | A | Rationaliser |
 
-### 3.4 Ressources (agrégées, jamais nominatives)
+### 3.4 Ressources (indicateurs agrégés ; jamais d'évaluation de personnes)
 
 | ID | Indicateur | Définition | Type | Décision |
 |---|---|---|---|---|
 | I-30 | Taux de charge par profil | Demande / capacité | A | Recruter, redéployer, arbitrer |
 | I-31 | Vacances de postes | Postes vacants et durée moyenne, par profil | R | Recruter |
 | I-32 | Dépendance aux prestataires | Part de capacité externe, par profil/application | R | Internaliser, sécuriser |
-| I-33 | Rôles à risque | Profils ou compétences portés par peu de personnes (sans nom) | A | Transmettre, former |
+| I-33 | Dépendances critiques | Profils, compétences ou fonctions portés par peu de personnes | A | Transmettre, former |
 | I-34 | Consommation du plafond d'effectifs (si suivi) | Effectifs / plafond | R | Recrutement possible |
 | I-35 | Part du run | Capacité de run / totale | R | Libérer des marges |
 

@@ -51,7 +51,7 @@ Parcours P-01 à P-08, P-22, P-23 (vue réduite), P-25, P-26 (base), P-27 ; écr
 | C-1.4 | Un utilisateur sans droit ne peut ni voir, ni déduire, ni se faire résumer un contenu N4 (y compris via l'assistant et les notifications) (RG-04, RG-29). |
 | C-1.5 | Toute valeur d'indicateur est cliquable jusqu'à ses faits sources, avec fiabilité et fraîcheur. |
 | C-1.6 | Une contradiction entre deux rapports génère un signal et une demande de précision traités de bout en bout (P-06). |
-| C-1.7 | Les métriques d'équipe de moins de N personnes ne s'affichent pas (RG-02) ; aucune vue nominative n'existe. |
+| C-1.7 | Aucune vue, aucun export ni aucune réponse de l'assistant ne note, classe ou compare des personnes ; les affectations nominatives ne sont visibles que des rôles habilités et de la personne concernée ; les agrégats sous le seuil sont masqués aux audiences sans droit nominatif. |
 | C-1.8 | Avec l'IA indisponible, le dépôt, la saisie de faits et la validation fonctionnent. |
 | C-1.9 | Un document contenant des consignes adressées à l'IA est traité comme du contenu et signalé (IA-12). |
 | C-1.10 | La vue stratégique est utilisable par un décideur sans aide, selon un test utilisateur (tâches P-23). |
@@ -100,7 +100,7 @@ Chaque question indique **ce qu'elle bloque** et une **proposition par défaut**
 | **Q-11** | **Information des agents** et du dialogue social : qui porte la communication ? (recommandation, non bloquant) | Acceptation | À lancer dès le lot 1 |
 | **Q-12** | **Charte graphique** : configurable par l'organisme ; quelle charte par défaut ? | UX | Charte neutre configurable |
 | **Q-13** | **Mode de diffusion** (logiciel libre, inscription à un socle interministériel, usage interne) | Gouvernance produit | À décider avec le commanditaire |
-| **Q-14** | **Niveau de précision attendu** en ressources : par rôle/profil (proposé) ou nominatif ? (déjà tranché sur le principe : pas de nominatif) | RSR | Rôle/profil/équipe agrégé |
+| **Q-14** | ~~Précision attendue en ressources ?~~ | — | **Tranchée** : **nominative autorisée** (personnes, affectations, temps) ; jamais d'évaluation |
 | **Q-15** | **Part des dépenses numériques** à consolider : seulement la direction du numérique, ou tout l'organisme (réponse aux contrôles) ? | FIN | Tout l'organisme, avec périmètre paramétrable |
 | **Q-16** | ~~Taille cible ?~~ | — | **Tranchée (D9)** : environ 300 personnes ; à confirmer s'il s'agit de l'organisme entier ou de la seule direction du numérique |
 | **Q-17** | **Langue de travail** : français seul, ou documents en anglais fréquents ? | IAF | Français ; documents en anglais tolérés |

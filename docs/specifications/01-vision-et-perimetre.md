@@ -18,7 +18,7 @@ Dans un organisme public, les informations qui permettent de décider sur le sys
 | O4 | **Aider à arbitrer** : scénarios, critères multiples, coût du retard et de l'inaction, note de décision prête à présenter. | Passer de la restitution à l'aide à la décision. |
 | O5 | **Produire** rapports de direction, synthèses, notes et présentations, **avec la source de chaque affirmation**. | Gain de temps ; confiance ; auditabilité. |
 | O6 | **Tracer** les décisions, hypothèses et bénéfices attendus, et leur suivi. | Justifier et apprendre des décisions passées. |
-| O7 | **Respecter les agents** : évaluer des applications et des équipes, jamais des personnes ; confidentialité et transparence sur l'usage de l'IA. | Décision D1 ; protection des agents ; acceptabilité sociale. |
+| O7 | **Respecter les agents** : les données sur les personnes servent à planifier, jamais à les évaluer ; confidentialité et transparence sur l'usage de l'IA. | Décision D1 ; protection des agents ; acceptabilité sociale. |
 | O8 | **Être configurable par organisme** : nomenclature budgétaire, unités de ressources, rôles, seuils, classification, vocabulaire, sans développement. | Chaque organisme applique ses propres règles (D4, D5). |
 
 ## 3 bis. Principes directeurs (arbitrent les choix de conception)
@@ -27,7 +27,7 @@ Dans un organisme public, les informations qui permettent de décider sur le sys
 2. **L'IA propose, l'humain dispose.** Aucun fait extrait par l'IA n'alimente un indicateur de direction sans avoir été confirmé par un humain habilité (voir RG-05, IA-03).
 3. **Toute information est traçable** : qui l'a dite, quand, dans quel document, avec quel niveau de confiance, et qui l'a validée.
 4. **Fiabilité visible** : chaque chiffre affiche s'il est déclaré, confirmé, validé ou vérifié, et sa fraîcheur.
-5. **On évalue des objets, pas des personnes** (D1) : applications, projets, équipes, services. Aucune vue ne permet de classer ou de juger un individu ; agrégation minimale d'effectif.
+5. **On évalue des objets, pas des personnes** (D1) : applications, projets, équipes, services. Les données sur les personnes (affectations, temps, compétences) servent à la **planification** ; aucune note, aucun classement ni aucune comparaison de personnes n'existe.
 6. **Utile dès le premier rapport** : l'outil donne de la valeur au contributeur (retour, synthèse, rappel) et pas seulement à la direction ; sinon l'adoption s'effondre.
 7. **Simplicité par rôle** : le contributeur voit une interface minimale ; la complexité est réservée à ceux qui en ont besoin.
 8. **Odin n'impose aucune règle externe** : nomenclatures, seuils, échéances et contraintes sont des paramètres de l'organisme ; Odin ne livre ni textes officiels ni procédures (D5).
@@ -60,14 +60,14 @@ Dans un organisme public, les informations qui permettent de décider sur le sys
 
 | Exclusion | Raison |
 |---|---|
-| **Évaluation individuelle** des agents (performance, notation, classement, suivi d'activité nominatif) | Décision D1 ; protection des agents ; cadre IA européen |
+| **Évaluation des personnes** (performance, productivité, notation, classement, comparaison, contrôle d'activité) | Décision D1 ; protection des agents |
 | **Multi-organismes, mutualisation, refacturation entre entités** | Décision D3 |
 | **Spécificités sectorielles** (nomenclatures et programmes propres aux collectivités ou à la santé) | Non visées en priorité ; l'organisme peut néanmoins configurer son instance (D4) |
 | **Opérations de sécurité** (détection, journaux, réponse à incident en temps réel) | Odin pilote, il n'opère pas ; il s'alimente des constats |
 | **Gestion des services informatiques** (tickets, support, CMDB opérationnelle) | Odin consomme des signaux ; il ne remplace pas ces outils |
 | **Canal d'alerte protégée** (lanceurs d'alerte) | Procédure légale distincte ; Odin y **renvoie** (voir RG-24) |
 | **Accompagnement des procédures publiques** (avis, formalités, évaluations réglementaires, registres officiels) | Odin aide à décider ; il n'embarque pas de procédures (D5) |
-| **Gestion RH nominative** (évaluations, rémunérations individuelles, dossiers) | Hors périmètre ; Odin raisonne par profil, rôle et équipe |
+| **Dossier RH** (évaluations, rémunérations individuelles, dossiers administratifs) | Odin gère affectations, profils et compétences, pas le dossier RH |
 | **Comptabilité et exécution budgétaire** | Odin consolide et pilote ; il ne remplace pas les outils financiers de l'organisme |
 
 ### 4.3 Hypothèses de travail
